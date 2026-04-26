@@ -3,48 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriVenture Launchpad • From Zero to Revenue-Generating Agriculture Startup</title>
+    <title>AgriVenture Launchpad • From Zero to Revenue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,200..900,30..100,0..1;1,9..144,200..900,30..100,0..1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f8f9f5; color: #333; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #2e7d32, #4caf50); color: white; padding: 3rem 2rem; text-align: center; }
-        h1 { margin: 0; font-size: 2.8rem; }
-        h2 { color: #2e7d32; border-bottom: 3px solid #4caf50; padding-bottom: 10px; }
-        .container { max-width: 1100px; margin: 2rem auto; padding: 0 20px; }
-        section { background: white; padding: 2rem; margin-bottom: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        ul { padding-left: 1.5rem; }
-        li { margin-bottom: 10px; }
-        .step { background: #e8f5e9; padding: 1.2rem; border-radius: 8px; margin: 1rem 0; }
-        .nav { background: #1b5e20; padding: 1rem; position: sticky; top: 0; z-index: 100; }
-        .nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 500; }
-        footer { background: #1b5e20; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
-        .highlight { background: #fff176; padding: 2px 6px; border-radius: 4px; }
+        :root {
+            --paper: #F4EDE0;
+            --paper-warm: #EFE5D2;
+            --paper-line: #D9CDB5;
+            --rule: #C8B996;
+            --ink: #1B1813;
+            --ink-soft: #3A352D;
+            --ink-quiet: #6E6557;
+            --accent: #8E2818;
+            --accent-soft: #B85A3F;
+            --highlight: #E8DCC2;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.6;
+            font-feature-settings: "ss01", "onum";
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.35;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.07 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+            mix-blend-mode: multiply;
+        }
+        .wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 56px 56px 120px;
+        }
+        .masthead {
+            border-top: 6px double var(--ink);
+            border-bottom: 1px solid var(--ink);
+            padding: 18px 0 22px;
+            margin-bottom: 48px;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: end;
+            gap: 24px;
+        }
+        .mast-l, .mast-r { 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 11px; 
+            text-transform: uppercase; 
+            letter-spacing: 0.14em; 
+            color: var(--ink-quiet); 
+        }
+        .mast-r { text-align: right; }
+        .mast-c { 
+            text-align: center; 
+            font-family: 'Fraunces', serif; 
+            font-variation-settings: "opsz" 144, "SOFT" 50, "wght" 700; 
+            font-size: 13px; 
+            letter-spacing: 0.32em; 
+            text-transform: uppercase; 
+            color: var(--ink); 
+        }
+        .title-block { 
+            text-align: center; 
+            margin-bottom: 64px; 
+            padding-bottom: 48px; 
+            border-bottom: 1px solid var(--rule); 
+        }
+        .eyebrow { 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 11px; 
+            letter-spacing: 0.32em; 
+            text-transform: uppercase; 
+            color: var(--accent); 
+            margin-bottom: 24px; 
+        }
+        h1 { 
+            font-family: 'Fraunces', serif; 
+            font-variation-settings: "opsz" 144, "wght" 380, "SOFT" 100, "WONK" 1; 
+            font-size: clamp(44px, 6.5vw, 88px); 
+            line-height: 0.94; 
+            letter-spacing: -0.02em; 
+            margin: 0 0 18px; 
+        }
+        h1 em { font-style: italic; color: var(--accent); }
+        .deck { 
+            font-family: 'Newsreader', serif; 
+            font-size: 21px; 
+            font-style: italic; 
+            color: var(--ink-soft); 
+            max-width: 720px; 
+            margin: 0 auto 36px; 
+            line-height: 1.45;
+        }
+        section { margin-bottom: 88px; }
+        .sec-head { 
+            display: grid; 
+            grid-template-columns: 80px 1fr; 
+            gap: 24px; 
+            align-items: baseline; 
+            margin-bottom: 36px; 
+            padding-bottom: 14px; 
+            border-bottom: 1px solid var(--ink); 
+        }
+        .sec-num { 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 12px; 
+            letter-spacing: 0.2em; 
+            color: var(--accent); 
+            padding-top: 6px; 
+        }
+        .sec-title { 
+            font-family: 'Fraunces', serif; 
+            font-variation-settings: "opsz" 60, "wght" 500, "SOFT" 50; 
+            font-size: clamp(28px, 3.5vw, 40px); 
+            line-height: 1.05; 
+            letter-spacing: -0.015em; 
+            margin: 0; 
+        }
+        .sec-title em { font-style: italic; color: var(--accent); }
+        .lede { 
+            font-family: 'Newsreader', serif; 
+            font-size: 19px; 
+            line-height: 1.55; 
+            color: var(--ink-soft); 
+            margin: 0 0 32px; 
+            max-width: 720px; 
+        }
+        .highlight { 
+            background: var(--paper-warm); 
+            border-left: 4px solid var(--accent); 
+            padding: 24px; 
+            margin: 32px 0; 
+        }
+        .step { 
+            background: var(--paper-warm); 
+            padding: 22px; 
+            border: 1px solid var(--rule); 
+            margin: 24px 0; 
+            border-radius: 4px; 
+        }
+        .nav { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(27,24,19,0.95); 
+            backdrop-filter: blur(8px); 
+            padding: 14px; 
+            z-index: 100; 
+            text-align: center; 
+            border-bottom: 1px solid var(--rule); 
+        }
+        .nav a { 
+            color: white; 
+            margin: 0 14px; 
+            text-decoration: none; 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 13px; 
+            letter-spacing: 0.08em; 
+        }
+        footer { 
+            margin-top: 88px; 
+            padding-top: 28px; 
+            border-top: 6px double var(--ink); 
+            font-family: 'JetBrains Mono', monospace; 
+            font-size: 10.5px; 
+            letter-spacing: 0.16em; 
+            text-transform: uppercase; 
+            color: var(--ink-quiet); 
+            text-align: center; 
+        }
+        a { color: var(--accent); text-decoration: underline dotted; }
     </style>
 </head>
 <body>
-
     <div class="nav">
         <a href="#registration">Business Registration</a>
         <a href="#udyam">Udyam Aadhaar</a>
         <a href="#regulated">Regulated Sectors</a>
-        <a href="#next">Next Steps for Agri Startup</a>
+        <a href="#next">Next Steps</a>
     </div>
 
-    <header>
-        <h1>AgriVenture Launchpad</h1>
-        <p style="font-size:1.3rem; margin-top:10px;">Your Complete Starting Point • Agriculture-Based Revenue Generation System</p>
-        <p style="margin-top:15px; opacity:0.95;">From Blank State to Legally Operational Proprietorship Firm</p>
-    </header>
+    <div class="wrap">
+        <!-- MASTHEAD -->
+        <header class="masthead">
+            <div class="mast-l">Vol. I &nbsp;·&nbsp; No. 01<br>Working Draft</div>
+            <div class="mast-c">AgriVenture Launchpad</div>
+            <div class="mast-r">Revenue Generation System<br>Agriculture-Based Startup</div>
+        </header>
 
-    <div class="container">
+        <!-- TITLE -->
+        <div class="title-block">
+            <div class="eyebrow">From Blank Slate • Living Document</div>
+            <h1>AgriVenture<br><em>Launchpad</em></h1>
+            <p class="deck">Your complete foundational journey for launching an agriculture-focused revenue generation system in India. Exact shape and form still evolving.</p>
+        </div>
 
+        <!-- INTRODUCTION -->
         <section id="introduction">
-            <h2>Welcome, Future Agri-Entrepreneur</h2>
-            <p>This webpage captures the complete foundational journey for launching an agriculture-focused revenue generation system in India. Whether your idea is crop-based, value-added processing, agritech services, organic inputs, farm-to-consumer models, or something completely new — this is your practical base document.</p>
+            <div class="sec-head">
+                <div class="sec-num">§ 00</div>
+                <h2 class="sec-title">Welcome, Future Agri-Entrepreneur</h2>
+            </div>
+            <p class="lede">This document captures the complete foundational journey for any agriculture-based revenue generation system. Whether your final form becomes crop-based, value-added processing, agritech services, organic inputs, farm-to-consumer, or something entirely new — this is your practical base.</p>
         </section>
 
+        <!-- REGISTRATION -->
         <section id="registration">
-            <h2>1. Register a Proprietorship Firm + Udyam Aadhaar</h2>
-            
+            <div class="sec-head">
+                <div class="sec-num">§ 01</div>
+                <h2 class="sec-title">Register a Proprietorship Firm + Udyam Aadhaar</h2>
+            </div>
+
             <div class="step">
                 <strong>Step 1: PAN &amp; Aadhaar Ready</strong><br>
                 Ensure you have PAN card and Aadhaar linked with mobile number.
@@ -52,7 +232,7 @@
 
             <div class="step">
                 <strong>Step 2: Udyam Aadhaar (MSME Registration) — Do This First</strong><br>
-                <strong>Official Link:</strong> <a href="https://udyamregistration.gov.in/" target="_blank">https://udyamregistration.gov.in/</a><br>
+                <strong>Official Link:</strong> <a href="https://udyamregistration.gov.in/" target="_blank">udyamregistration.gov.in</a><br>
                 • Completely free • Takes 10–15 minutes • Instant certificate with QR code<br>
                 Benefits: Priority loans, subsidies, government schemes, easier bank account opening.
             </div>
@@ -73,9 +253,13 @@
             </div>
         </section>
 
+        <!-- UDYAM -->
         <section id="udyam">
-            <h2>Udyam Aadhaar – Quick Start Guide</h2>
-            <p><strong>Why do it immediately?</strong> It gives your agriculture startup instant credibility and access to dozens of government schemes designed for agri-MSMEs.</p>
+            <div class="sec-head">
+                <div class="sec-num">§ 02</div>
+                <h2 class="sec-title">Udyam Aadhaar – Quick Start Guide</h2>
+            </div>
+            <p class="lede"><strong>Why do it immediately?</strong> It gives your agriculture startup instant credibility and access to dozens of government schemes designed for agri-MSMEs.</p>
             <ul>
                 <li>One registration for multiple activities (farming, processing, trading, services)</li>
                 <li>No renewal required</li>
@@ -83,71 +267,70 @@
             </ul>
         </section>
 
+        <!-- REGULATED SECTORS -->
         <section id="regulated">
-            <h2>2. List of Businesses Involving Regulated Sectors</h2>
-            
-            <h3>Food &amp; Beverage</h3>
+            <div class="sec-head">
+                <div class="sec-num">§ 03</div>
+                <h2 class="sec-title">Businesses Involving Regulated Sectors</h2>
+            </div>
+
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Food &amp; Beverage</h3>
             <ul>
                 <li>Food processing, organic products, spices, ready-to-eat, dairy, honey, pickles</li>
-                <li>Restaurants, cloud kitchens, FPO (Farmer Producer Organization) products</li>
+                <li>Restaurants, cloud kitchens, FPO products</li>
                 <li><strong>Required:</strong> FSSAI License</li>
             </ul>
 
-            <h3>Agriculture Inputs &amp; Chemicals</h3>
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Agriculture Inputs &amp; Chemicals</h3>
             <ul>
                 <li>Fertilizers, pesticides, bio-stimulants, seeds</li>
                 <li><strong>Required:</strong> Fertilizer License, Insecticide License, Seed Certification</li>
             </ul>
 
-            <h3>Healthcare / Nutraceuticals (Agri-linked)</h3>
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Healthcare / Nutraceuticals (Agri-linked)</h3>
             <ul>
                 <li>Ayurvedic herbs, medicinal plants, organic supplements</li>
                 <li><strong>Required:</strong> AYUSH / Drug Controller approvals</li>
             </ul>
 
-            <h3>Import-Export of Agri Commodities</h3>
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Import-Export of Agri Commodities</h3>
             <ul>
                 <li>Rice, spices, fruits, vegetables, coffee, tea</li>
-                <li><strong>Required:</strong> IEC Code + APEDA Registration + FSSAI (for food)</li>
+                <li><strong>Required:</strong> IEC Code + APEDA + FSSAI (for food)</li>
             </ul>
 
-            <h3>Manufacturing &amp; Processing Units</h3>
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Manufacturing &amp; Processing Units</h3>
             <ul>
-                <li>Oil mills, flour mills, cold storage, packaging units, bio-fertilizer plants</li>
+                <li>Oil mills, flour mills, cold storage, packaging, bio-fertilizer plants</li>
                 <li><strong>Required:</strong> Factory License, Pollution NOC, Fire NOC</li>
-            </ul>
-
-            <h3>Other Common Agri-Regulated Areas</h3>
-            <ul>
-                <li>Animal husbandry, poultry, fisheries</li>
-                <li>Renewable energy (solar pumps, biogas)</li>
-                <li>Real estate / farm land development (if commercial)</li>
             </ul>
         </section>
 
+        <!-- NEXT STEPS -->
         <section id="next">
-            <h2>Next Actions for Your Agriculture Startup (Blank State → Revenue)</h2>
-            <ol>
+            <div class="sec-head">
+                <div class="sec-num">§ 04</div>
+                <h2 class="sec-title">Next Actions (Blank State → Revenue)</h2>
+            </div>
+            <ol style="font-size:16.5px; line-height:1.85;">
                 <li>Complete Udyam + Bank Account this week</li>
-                <li>Decide core revenue model (examples: contract farming, value-added products, agritourism, input supply, tech platform, export, etc.)</li>
+                <li>Decide core revenue model (contract farming, value-added products, agritourism, input supply, tech platform, export, etc.)</li>
                 <li>Validate idea with 20–30 potential customers/farmers</li>
                 <li>Prepare simple one-page business model</li>
                 <li>Apply for relevant licenses based on chosen sector</li>
-                <li>Explore subsidies: PM-KISAN, Agri Infrastructure Fund, State Agri Schemes, NABARD, etc.</li>
+                <li>Explore subsidies: PM-KISAN, Agriculture Infrastructure Fund, NABARD, State schemes</li>
             </ol>
-            
-            <p style="background:#e8f5e9; padding:1.5rem; border-radius:10px; margin-top:2rem;">
+
+            <div class="highlight">
                 <strong>Remember:</strong> You are building a revenue generation system rooted in agriculture. The exact shape and form will evolve — this document gives you the legal and structural foundation to start experimenting safely and legitimately.
-            </p>
+            </div>
         </section>
 
+        <footer>
+            AgriVenture Launchpad • Living Document for Agriculture-Based Startups in India<br>
+            Start small. Stay compliant. Scale with revenue.<br>
+            Last Updated: April 2026 • Always verify latest rules on official government portals
+        </footer>
     </div>
-
-    <footer>
-        <p><strong>AgriVenture Launchpad</strong> • Living Document for Agriculture-Based Startups in India</p>
-        <p>Start small. Stay compliant. Scale with revenue.</p>
-        <p style="margin-top:1rem; font-size:0.9rem;">Last Updated: April 2026 • Always verify latest rules on official government portals</p>
-    </footer>
-
 </body>
 </html>
