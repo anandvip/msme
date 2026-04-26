@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriVenture Launchpad • Revenue Generation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,200..900,30..100,0..1;1,9..144,200..900,30..100,0..1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F4EDE0;
+            --paper-warm: #EFE5D2;
+            --paper-line: #D9CDB5;
+            --rule: #C8B996;
+            --ink: #1B1813;
+            --ink-soft: #3A352D;
+            --ink-quiet: #6E6557;
+            --accent: #8E2818;
+            --accent-soft: #B85A3F;
+            --highlight: #E8DCC2;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.6;
+            font-feature-settings: "ss01", "onum";
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.35;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.07 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+            mix-blend-mode: multiply;
+        }
+        .wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 56px 56px 120px;
+        }
+        .masthead {
+            border-top: 6px double var(--ink);
+            border-bottom: 1px solid var(--ink);
+            padding: 18px 0 22px;
+            margin-bottom: 48px;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: end;
+            gap: 24px;
+        }
+        .mast-l, .mast-r { font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-quiet); }
+        .mast-r { text-align: right; }
+        .mast-c { text-align: center; font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 50, "wght" 700; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink); }
+        .title-block { text-align: center; margin-bottom: 64px; padding-bottom: 48px; border-bottom: 1px solid var(--rule); }
+        .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+        h1 { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "wght" 380, "SOFT" 100, "WONK" 1; font-size: clamp(44px, 6.5vw, 88px); line-height: 0.94; letter-spacing: -0.02em; margin: 0 0 18px; }
+        h1 em { font-style: italic; color: var(--accent); }
+        .deck { font-family: 'Newsreader', serif; font-size: 21px; font-style: italic; color: var(--ink-soft); max-width: 720px; margin: 0 auto 36px; }
+        section { margin-bottom: 88px; }
+        .sec-head { display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: baseline; margin-bottom: 36px; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
+        .sec-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: var(--accent); padding-top: 6px; }
+        .sec-title { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 60, "wght" 500, "SOFT" 50; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.05; letter-spacing: -0.015em; margin: 0; }
+        .sec-title em { font-style: italic; color: var(--accent); }
+        .lede { font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 24px; max-width: 720px; }
+        .highlight { background: var(--paper-warm); border-left: 4px solid var(--accent); padding: 24px; margin: 32px 0; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+        .nav { position: sticky; top: 0; background: rgba(27,24,19,0.95); backdrop-filter: blur(8px); padding: 12px; z-index: 100; text-align: center; border-bottom: 1px solid var(--rule); }
+        .nav a { color: white; margin: 0 12px; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; }
+        footer { margin-top: 88px; padding-top: 28px; border-top: 6px double var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-quiet); text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#foundation">Legal Foundation</a>
+        <a href="#financial">Financial Architecture</a>
+        <a href="#schemes">Scheme Stack</a>
+        <a href="#next">Next Moves</a>
+        <a href="https://anandvip.github.io/msme/" target="_blank">Pehowa Ledger</a>
+    </div>
+
+    <div class="wrap">
+        <!-- MASTHEAD -->
+        <header class="masthead">
+            <div class="mast-l">Vol. I &nbsp;·&nbsp; No. 02<br>Working Draft</div>
+            <div class="mast-c">AgriVenture Launchpad</div>
+            <div class="mast-r">Revenue Generation System<br>Agriculture-Based Startup</div>
+        </header>
+
+        <!-- TITLE -->
+        <div class="title-block">
+            <div class="eyebrow">From Blank Slate • Living Document</div>
+            <h1>AgriVenture<br><em>Launchpad</em></h1>
+            <p class="deck">Complete foundation for any agriculture revenue generation system — registration, compliance, and financial architecture. Exact shape still evolving.</p>
+        </div>
+
+        <!-- FOUNDATION -->
+        <section id="foundation">
+            <div class="sec-head">
+                <div class="sec-num">§ 01</div>
+                <h2 class="sec-title">Legal Foundation — Proprietorship + Udyam</h2>
+            </div>
+            <p class="lede">Start here. These steps create the legal shell for any agriculture activity (inputs, processing, services, horticulture, export, FPO-linked, etc.).</p>
+
+            <div class="highlight">
+                <strong>Immediate Action:</strong> Complete Udyam Aadhaar today — free, instant, unlocks subsidies & banking.
+            </div>
+
+            <ul style="font-size:16px; line-height:1.8;">
+                <li><strong>Udyam Registration</strong> → <a href="https://udyamregistration.gov.in/" target="_blank">udyamregistration.gov.in</a> (10–15 mins, instant PDF with QR)</li>
+                <li>Current Bank Account in firm name (use Udyam certificate)</li>
+                <li>Shop & Establishment Registration (state labour portal)</li>
+                <li>GST Registration (if turnover crosses threshold or inter-state)</li>
+            </ul>
+        </section>
+
+        <!-- FINANCIAL ARCHITECTURE -->
+        <section id="financial">
+            <div class="sec-head">
+                <div class="sec-num">§ 02</div>
+                <h2 class="sec-title">Financial Architecture — Ground Study Reference</h2>
+            </div>
+            <p class="lede">Three-instrument structure + layered schemes deliver low-cost capital for post-harvest, processing, or value-add agriculture projects.</p>
+
+            <div class="card-grid">
+                <div style="background:var(--paper-warm); padding:24px; border:1px solid var(--rule);">
+                    <h3 style="margin:0 0 12px; font-family:'Fraunces',serif; color:var(--accent);">Loan Instruments</h3>
+                    <p><strong>Term Loan</strong> — Fixed assets (chambers, civil, machinery)<br>
+                       <strong>CC Limit</strong> — Working capital (procurement, operations)<br>
+                       <strong>Bank Guarantee</strong> — Tenders & credibility</p>
+                </div>
+                <div style="background:var(--paper-warm); padding:24px; border:1px solid var(--rule);">
+                    <h3 style="margin:0 0 12px; font-family:'Fraunces',serif; color:var(--accent);">Spine Scheme</h3>
+                    <p><strong>Agriculture Infrastructure Fund (AIF)</strong><br>
+                    Up to ₹2 Cr • Effective ~6% • Collateral-free (CGTMSE)</p>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <strong>Reference Case:</strong> Aurick Hisar (Banana Ripening Centre) — funded via NABARD ABIC at HAU Hisar. Same state, same stack, recent & operational.
+            </div>
+        </section>
+
+        <!-- SCHEME STACK -->
+        <section id="schemes">
+            <div class="sec-head">
+                <div class="sec-num">§ 03</div>
+                <h2 class="sec-title">Scheme Stack — Decision Tree</h2>
+            </div>
+            <ul style="font-size:16px; line-height:1.8;">
+                <li><strong>AIF (Spine)</strong> — 6% effective</li>
+                <li><strong>NHB / NABARD AMI</strong> — 33–35% capital subsidy</li>
+                <li><strong>PMEGP / PMFME</strong> — 25–35% margin money</li>
+                <li><strong>Haryana State Subvention</strong> — Additional up to 6%</li>
+            </ul>
+        </section>
+
+        <!-- NEXT MOVES -->
+        <section id="next">
+            <div class="sec-head">
+                <div class="sec-num">§ 04</div>
+                <h2 class="sec-title">Immediate Next Moves</h2>
+            </div>
+            <ol style="font-size:16px; line-height:1.9;">
+                <li>Register Udyam Aadhaar this week</li>
+                <li>Open current account in firm name</li>
+                <li>Visit 2–3 working units (ripening/processing/FPO)</li>
+                <li>Engage HAU Hisar ABIC or local incubator</li>
+                <li>Book introductory meetings with ICICI / Kotak / HDFC using the folio language</li>
+            </ol>
+        </section>
+
+        <footer>
+            AgriVenture Launchpad • Companion to Pehowa Ledger • Still shaping exact form • April 2026<br>
+            <a href="https://anandvip.github.io/msme/" style="color:var(--accent);">View Pehowa Ledger →</a>
+        </footer>
+    </div>
+</body>
+</html>
