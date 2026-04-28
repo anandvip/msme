@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playbook is genuinely good for — A Bridge-Builder's Strategic Companion</title>
+    <meta name="description" content="A focused strategic playbook for entrepreneurs deciding whether to bridge Indian agriculture, snack-food manufacturers, and FTA-driven export markets. Companion to the India Trade Atlas." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================
+           DESIGN TOKENS  (matched to Trade Atlas)
+           ============================================ */
+        :root {
+            --bg:           #FAF6EE;
+            --bg-alt:       #F2EBDB;
+            --bg-deep:      #EBE2CC;
+            --surface:      #FFFFFF;
+            --surface-warm: #FCF9F2;
+            --ink:          #1A1715;
+            --ink-soft:     #4B4540;
+            --ink-mute:     #7A7268;
+            --rule:         #D9CCB0;
+            --rule-soft:    #E8DEC9;
+
+            --saffron:      #C9621D;
+            --saffron-bg:   #FBE9D1;
+            --saffron-deep: #A8501B;
+            --indigo:       #1F3A5F;
+            --indigo-bg:    #DCE3EC;
+            --moss:         #4A7858;
+            --moss-bg:      #E2EDDB;
+            --crimson:      #9B3B2D;
+            --gold:         #B89A52;
+
+            --shadow-sm:    0 1px 2px rgba(26,23,21,0.04), 0 1px 1px rgba(26,23,21,0.03);
+            --shadow-md:    0 4px 12px rgba(26,23,21,0.06), 0 2px 4px rgba(26,23,21,0.03);
+            --shadow-lg:    0 12px 32px rgba(26,23,21,0.08);
+
+            --radius-sm:    4px;
+            --radius-md:    8px;
+            --radius-lg:    14px;
+
+            --serif:        'Fraunces', 'Georgia', serif;
+            --sans:         'Manrope', 'Helvetica Neue', sans-serif;
+            --mono:         'JetBrains Mono', 'SF Mono', monospace;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.65;
+            color: var(--ink);
+            background: var(--bg);
+            background-image:
+                radial-gradient(circle at 14% 8%, rgba(74,120,88,0.06), transparent 40%),
+                radial-gradient(circle at 86% 92%, rgba(201,98,29,0.05), transparent 45%);
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        ::selection { background: var(--saffron-bg); color: var(--ink); }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--serif);
+            font-weight: 500;
+            color: var(--ink);
+            letter-spacing: -0.015em;
+            margin: 0;
+        }
+
+        a { color: var(--indigo); }
+
+        .container { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+        .container-wide { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+        /* ============================================
+           MASTHEAD
+           ============================================ */
+        .masthead {
+            border-bottom: 1px solid var(--rule);
+            padding: 64px 0 52px;
+            position: relative;
+            overflow: hidden;
+        }
+        .eyebrow {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--moss);
+            margin-bottom: 14px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .eyebrow::before {
+            content: '';
+            width: 28px; height: 1px;
+            background: var(--moss);
+            display: inline-block;
+        }
+        .title {
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: 1.02;
+            font-weight: 400;
+            font-variation-settings: "opsz" 144, "SOFT" 30;
+            margin-bottom: 22px;
+            max-width: 16ch;
+        }
+        .title em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--saffron);
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .deck {
+            font-size: 19px;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            max-width: 60ch;
+            margin-bottom: 32px;
+        }
+        .signpost {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--ink-mute);
+            letter-spacing: 0.06em;
+            padding: 14px 20px;
+            background: var(--surface-warm);
+            border-left: 3px solid var(--saffron);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            display: inline-block;
+        }
+        .signpost a { color: var(--saffron); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+        /* ============================================
+           TABLE OF CONTENTS
+           ============================================ */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            margin: 48px 0 64px;
+            box-shadow: var(--shadow-sm);
+        }
+        .toc-h {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--ink-mute);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0; margin: 0;
+            counter-reset: toc;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 8px 32px;
+        }
+        .toc-list li {
+            counter-increment: toc;
+            padding: 6px 0;
+            border-bottom: 1px dotted var(--rule-soft);
+            display: flex; align-items: baseline; gap: 12px;
+        }
+        .toc-list li::before {
+            content: counter(toc, decimal-leading-zero);
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--saffron);
+            font-weight: 500;
+            letter-spacing: 0.08em;
+        }
+        .toc-list a {
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 14.5px;
+            line-height: 1.4;
+            flex: 1;
+        }
+        .toc-list a:hover { color: var(--saffron); }
+
+        /* ============================================
+           SECTION SCAFFOLD
+           ============================================ */
+        section.chapter {
+            margin: 0 0 80px;
+            scroll-margin-top: 24px;
+        }
+        .chapter-num {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            color: var(--saffron);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .chapter-title {
+            font-size: clamp(28px, 3.5vw, 40px);
+            line-height: 1.1;
+            font-weight: 500;
+            margin-bottom: 18px;
+            max-width: 22ch;
+            font-variation-settings: "opsz" 144;
+        }
+        .chapter-deck {
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--ink-soft);
+            margin-bottom: 28px;
+            max-width: 64ch;
+        }
+        .chapter-body p {
+            margin: 0 0 16px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        .chapter-body p:last-child { margin-bottom: 0; }
+        .chapter-body strong { color: var(--ink); font-weight: 600; }
+
+        h3.subhead {
+            font-size: 22px;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            font-weight: 500;
+            font-variation-settings: "opsz" 100;
+        }
+
+        /* ============================================
+           CALLOUTS
+           ============================================ */
+        .callout {
+            background: var(--saffron-bg);
+            border-left: 4px solid var(--saffron);
+            padding: 18px 22px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+            font-size: 15.5px;
+            line-height: 1.6;
+        }
+        .callout-label {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--saffron-deep);
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .callout strong { color: var(--ink); }
+
+        .callout.indigo {
+            background: var(--indigo-bg);
+            border-left-color: var(--indigo);
+        }
+        .callout.indigo .callout-label { color: var(--indigo); }
+
+        .callout.moss {
+            background: var(--moss-bg);
+            border-left-color: var(--moss);
+        }
+        .callout.moss .callout-label { color: var(--moss); }
+
+        .callout.warning {
+            background: #F4ECD7;
+            border-left-color: var(--gold);
+        }
+        .callout.warning .callout-label { color: #8A6E2F; }
+
+        /* ============================================
+           CROP MATRIX TABLE
+           ============================================ */
+        .matrix-wrap {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--rule);
+            box-shadow: var(--shadow-sm);
+            background: var(--surface);
+        }
+        .matrix {
+            width: 100%;
+            min-width: 760px;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .matrix th {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-mute);
+            text-align: left;
+            padding: 14px 14px;
+            border-bottom: 1px solid var(--rule);
+            font-weight: 500;
+            background: var(--surface-warm);
+            position: sticky; top: 0;
+        }
+        .matrix td {
+            padding: 14px 14px;
+            border-bottom: 1px solid var(--rule-soft);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        .matrix tr:last-child td { border-bottom: 0; }
+        .matrix tr.tier-1 td { background: rgba(251,233,209,0.35); }
+        .matrix tr.tier-2 td { background: rgba(220,227,236,0.18); }
+
+        .crop-name {
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 2px;
+        }
+        .crop-sub {
+            font-family: var(--mono);
+            font-size: 10px;
+            color: var(--ink-mute);
+            letter-spacing: 0.04em;
+        }
+        .stars {
+            color: var(--saffron);
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+        .stars-mute {
+            color: var(--rule);
+        }
+        .fta-chips {
+            display: flex; flex-wrap: wrap; gap: 4px;
+        }
+        .fta-chip {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.04em;
+            padding: 2px 7px;
+            background: var(--indigo-bg);
+            color: var(--indigo);
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        .tier-pill {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            padding: 3px 9px;
+            border-radius: 999px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .tier-1 .tier-pill { background: var(--saffron); color: white; }
+        .tier-2 .tier-pill { background: var(--indigo); color: white; }
+        .tier-3 .tier-pill { background: var(--ink-mute); color: white; }
+
+        /* ============================================
+           BUSINESS MODEL CARDS
+           ============================================ */
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin: 28px 0;
+        }
+        .model-card {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-lg);
+            padding: 24px 26px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .model-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+        .model-num {
+            position: absolute;
+            top: 16px; right: 22px;
+            font-family: var(--serif);
+            font-size: 36px;
+            font-weight: 300;
+            color: var(--rule);
+            line-height: 1;
+            font-variation-settings: "opsz" 144;
+        }
+        .model-card.recommend {
+            border-color: var(--moss);
+            background: linear-gradient(180deg, var(--surface) 0%, var(--moss-bg) 200%);
+        }
+        .model-card.recommend .model-num { color: var(--moss); }
+        .model-card.recommend::before {
+            content: 'STACK';
+            position: absolute;
+            top: -10px; left: 22px;
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            background: var(--moss);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        .model-name {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 500;
+            margin: 0 0 10px;
+            padding-right: 50px;
+            line-height: 1.2;
+        }
+        .model-desc {
+            font-size: 14px;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            margin: 0 0 16px;
+        }
+        .model-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 16px;
+            padding-top: 14px;
+            border-top: 1px solid var(--rule-soft);
+        }
+        .meta-row {
+            display: flex; flex-direction: column; gap: 2px;
+        }
+        .meta-label {
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ink-mute);
+        }
+        .meta-val {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        .verdict {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--rule-soft);
+            font-size: 13.5px;
+            color: var(--ink-soft);
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .verdict strong { font-style: normal; color: var(--ink); }
+
+        /* ============================================
+           POSITIONING SCRIPTS
+           ============================================ */
+        .scripts {
+            display: flex; flex-direction: column;
+            gap: 18px;
+            margin: 28px 0;
+        }
+        .script {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            box-shadow: var(--shadow-sm);
+        }
+        .script-aud {
+            display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        .audience-tag {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            background: var(--saffron-bg);
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        .script-title {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .script-quote {
+            font-family: var(--serif);
+            font-size: 17px;
+            font-style: italic;
+            line-height: 1.55;
+            color: var(--ink);
+            border-left: 3px solid var(--saffron);
+            padding: 6px 0 6px 18px;
+            margin: 12px 0 14px;
+            font-variation-settings: "opsz" 100;
+        }
+        .script-note {
+            font-size: 13.5px;
+            color: var(--ink-mute);
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           NINETY-DAY PLAN
+           ============================================ */
+        .timeline {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 0 24px;
+            margin: 28px 0;
+        }
+        .week-block {
+            display: contents;
+        }
+        .week-label {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            color: var(--saffron);
+            font-weight: 500;
+            padding-top: 16px;
+            text-transform: uppercase;
+        }
+        .week-tasks {
+            border-left: 2px solid var(--rule);
+            padding: 0 0 28px 24px;
+            margin-left: 4px;
+            position: relative;
+        }
+        .week-tasks::before {
+            content: '';
+            position: absolute;
+            left: -7px; top: 18px;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: var(--saffron);
+            border: 2px solid var(--bg);
+        }
+        .week-h {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 500;
+            margin: 12px 0 8px;
+        }
+        .week-list {
+            list-style: none;
+            padding: 0; margin: 0;
+        }
+        .week-list li {
+            padding: 6px 0 6px 26px;
+            position: relative;
+            font-size: 14.5px;
+            line-height: 1.55;
+        }
+        .week-list li::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 13px;
+            width: 12px; height: 12px;
+            border: 1.5px solid var(--ink-mute);
+            border-radius: 3px;
+        }
+
+        /* ============================================
+           STACK DIAGRAM (composite)
+           ============================================ */
+        .stack-diagram {
+            margin: 28px 0;
+            padding: 36px 32px;
+            background: linear-gradient(135deg, var(--moss-bg) 0%, var(--surface-warm) 100%);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--rule);
+        }
+        .stack-layer {
+            background: var(--surface);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 8px;
+            display: flex; align-items: center; gap: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+        .stack-layer:last-child { margin-bottom: 0; }
+        .stack-num {
+            font-family: var(--serif);
+            font-size: 28px;
+            color: var(--moss);
+            line-height: 1;
+            font-weight: 500;
+        }
+        .stack-content { flex: 1; }
+        .stack-name {
+            font-family: var(--serif);
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        .stack-why {
+            font-size: 13px;
+            color: var(--ink-soft);
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           MULTI-GEN BOX
+           ============================================ */
+        .multigen-box {
+            background: linear-gradient(135deg, var(--surface) 0%, var(--indigo-bg) 200%);
+            border: 1px solid var(--rule);
+            border-radius: var(--radius-lg);
+            padding: 32px 36px;
+            margin: 28px 0;
+        }
+        .multigen-h {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .multigen-box p { font-size: 15px; line-height: 1.65; }
+
+        /* ============================================
+           RESOURCES LIST
+           ============================================ */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin: 24px 0;
+        }
+        .resource-card {
+            padding: 18px 22px;
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--rule);
+            box-shadow: var(--shadow-sm);
+        }
+        .resource-card h4 {
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        .resource-card p {
+            font-size: 13.5px;
+            color: var(--ink-soft);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ============================================
+           ACRONYM TOOLTIPS  (lifted from Trade Atlas)
+           ============================================ */
+        abbr.gloss {
+            text-decoration: none;
+            border-bottom: 1px dotted var(--saffron);
+            cursor: help;
+            font-style: normal;
+            color: inherit;
+            transition: background 0.15s, border-color 0.15s;
+            padding: 0 1px;
+            border-radius: 2px;
+        }
+        abbr.gloss:hover, abbr.gloss:focus {
+            background: var(--saffron-bg);
+            border-bottom-color: var(--saffron);
+            outline: none;
+        }
+        abbr.gloss[aria-expanded="true"] {
+            background: var(--saffron-bg);
+            border-bottom-style: solid;
+        }
+        .tooltip-pop {
+            position: absolute;
+            max-width: 320px;
+            background: var(--ink);
+            color: var(--bg);
+            padding: 14px 16px 12px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            font-family: var(--sans);
+            font-size: 13px;
+            line-height: 1.5;
+            z-index: 200;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .tooltip-pop.show {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .tooltip-pop::after {
+            content: '';
+            position: absolute;
+            left: var(--arrow-left, 50%);
+            transform: translateX(-50%);
+            border: 7px solid transparent;
+        }
+        .tooltip-pop[data-pos="above"]::after {
+            top: 100%;
+            border-top-color: var(--ink);
+        }
+        .tooltip-pop[data-pos="below"]::after {
+            bottom: 100%;
+            border-bottom-color: var(--ink);
+        }
+        .tt-title {
+            font-family: var(--serif);
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #FAE7C8;
+        }
+        .tt-full {
+            font-family: var(--sans);
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--bg);
+            opacity: 0.85;
+            font-style: italic;
+            display: block;
+            margin-top: 2px;
+        }
+        .tt-desc {
+            color: rgba(250,246,238,0.88);
+            margin: 8px 0 0;
+        }
+
+        /* ============================================
+           CLOSING / RECALL
+           ============================================ */
+        .closing-box {
+            background: var(--ink);
+            color: var(--bg);
+            padding: 44px 44px 40px;
+            border-radius: var(--radius-lg);
+            margin: 32px 0 40px;
+        }
+        .closing-eyebrow {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #FAE7C8;
+            margin-bottom: 16px;
+        }
+        .closing-q {
+            font-family: var(--serif);
+            font-size: 24px;
+            line-height: 1.35;
+            font-weight: 400;
+            font-style: italic;
+            margin: 0 0 22px;
+            font-variation-settings: "opsz" 144, "SOFT" 100;
+        }
+        .closing-hint {
+            font-size: 14.5px;
+            color: rgba(250,246,238,0.78);
+            line-height: 1.6;
+        }
+
+        /* footer */
+        .colophon {
+            margin: 64px 0 60px;
+            padding-top: 32px;
+            border-top: 1px solid var(--rule);
+            font-size: 13px;
+            color: var(--ink-mute);
+            line-height: 1.6;
+        }
+        .colophon strong { color: var(--ink-soft); }
+
+        /* responsive */
+        @media (max-width: 720px) {
+            .container, .container-wide { padding: 0 20px; }
+            .timeline { grid-template-columns: 1fr; gap: 0; }
+            .week-tasks { border-left: none; padding-left: 0; margin-left: 0; }
+            .week-tasks::before { display: none; }
+            .week-label { padding-top: 0; margin-top: 24px; }
+            .closing-box { padding: 28px 24px; }
+            .closing-q { font-size: 19px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     MASTHEAD
+     ============================================ -->
+<header class="masthead">
+    <div class="container">
+        <div class="eyebrow">Strategic Playbook · Vol II of the Trade Atlas Series</div>
+        <h1 class="title">Playbook is <em>genuinely</em> good for —</h1>
+        <p class="deck">— one specific decision. <strong>Whether to spend the next ninety days testing if this opportunity is real for you.</strong> Everything else in this document flows from that.</p>
+        <p class="deck" style="margin-top: -16px;">It compresses roughly forty hours of scattered research — FTA texts, NABARD schemes, APEDA registration, snack-industry procurement patterns, Haryana cropping cycles, and the bureaucratic gotchas nobody warns you about — into twenty-five minutes of reading and ₹2 lakh of low-risk field diligence. Without it, you'd spend three weekends Googling and probably make your first call to a procurement manager without knowing the right vocabulary. With it, you walk in informed.</p>
+        <p class="deck" style="margin-top: -16px;">Either you'll come back with a foundation worth building on, or with knowledge that compounds into whatever you do next. <em>Both outcomes are worth the read.</em></p>
+        <div class="signpost">Companion to the <a href="india-fta-explorer.html">India Trade Atlas</a> — refer back when an FTA term needs unpacking.</div>
+    </div>
+</header>
+
+<main>
+<div class="container">
+
+<!-- ============================================
+     TABLE OF CONTENTS
+     ============================================ -->
+<nav class="toc" aria-label="Table of contents">
+    <div class="toc-h">Contents</div>
+    <ol class="toc-list">
+        <li><a href="#premise">The Premise — and why the gap is real</a></li>
+        <li><a href="#matrix">Haryana Crop × FTA Match Matrix</a></li>
+        <li><a href="#models">Six Business Models — the strategic options</a></li>
+        <li><a href="#composite">The Recommended Composite</a></li>
+        <li><a href="#positioning">Self-Positioning — four audience scripts</a></li>
+        <li><a href="#ninety">First 90 Days — the action plan</a></li>
+        <li><a href="#reality">Reality Check — what nobody tells you</a></li>
+        <li><a href="#multigen">The Multi-Generational Lens</a></li>
+        <li><a href="#resources">Resources &amp; Further Research</a></li>
+        <li><a href="#closing">Closing Reflection</a></li>
+    </ol>
+</nav>
+
+<!-- ============================================
+     1 · PREMISE
+     ============================================ -->
+<section class="chapter" id="premise">
+    <div class="chapter-num">Chapter 01</div>
+    <h2 class="chapter-title">The Premise — and why the gap is real.</h2>
+    <p class="chapter-deck">India just signed three transformative FTAs in fifteen months (UK, Oman, and the EU framework). In parallel, snack-food manufacturers are scrambling for compliant, traceable, consistent agri-supply. Between these two lies a narrow but lucrative information corridor.</p>
+
+    <div class="chapter-body">
+        <p>The asymmetry is structural. A farmer in Karnal growing wheat-rice on auto-pilot has no view into the fact that the UK CETA just made Indian millets duty-free, that PepsiCo's procurement team in Sahibabad wants 4,000 tonnes of specific potato varieties for processing, or that the UAE's re-export hubs are paying 22% premiums for traceable basmati. A procurement manager at Bikaji or Haldiram's, conversely, has a buyer requirement but limited visibility into which farmer clusters can grow to spec, when, and at what consistency.</p>
+
+        <p>This gap has historically been bridged by APMC-mandi commission agents and the larger commodity traders. Their model is volume-based, opaque to farmers, and not optimised for FTA-specific quality requirements (organic certification, traceability, residue limits). The new generation of FTAs explicitly rewards organised supply — exactly the layer commission agents do not provide.</p>
+
+        <div class="callout">
+            <div class="callout-label">The opportunity in one line</div>
+            <strong>Be the person who can walk into a Karnal village panchayat and explain — in plain Hindi — exactly what the UK CETA means for their next sowing season; and walk into a PepsiCo procurement office in Gurugram with a signed-up FPO of 200 farmers ready to grow to spec.</strong>
+        </div>
+
+        <p>The role is part data-translator, part trust-broker, part compliance-coach. It does not require capital-intensive aggregation or warehousing. It does require credibility, patience, and a willingness to spend Year 1 building relationships that pay back in Years 2–5.</p>
+    </div>
+</section>
+
+<!-- ============================================
+     2 · CROP MATRIX
+     ============================================ -->
+<section class="chapter" id="matrix">
+    <div class="chapter-num">Chapter 02</div>
+    <h2 class="chapter-title">Haryana Crop × FTA Match Matrix.</h2>
+    <p class="chapter-deck">Crops ranked by climate fit, FTA-driven export pull, and Indian snack-industry buyer interest. Tier-1 rows are the highest-leverage starting points for a bridge-builder.</p>
+
+    <div class="chapter-body">
+        <div class="matrix-wrap">
+            <table class="matrix">
+                <thead>
+                    <tr>
+                        <th>Crop</th>
+                        <th>Climate Fit</th>
+                        <th>Top FTA Markets</th>
+                        <th>Indian Snack-Industry Buyers</th>
+                        <th>Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tier-1">
+                        <td>
+                            <div class="crop-name">Bajra · Jowar · Ragi</div>
+                            <div class="crop-sub">Pearl millet, sorghum, finger millet · Kharif</div>
+                        </td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UK CETA</span><span class="fta-chip">EU FTA</span><span class="fta-chip">Australia</span><span class="fta-chip">Gulf</span></div></td>
+                        <td>Health-snack manufacturers (Haldiram's, ITC Aashirvaad, Soulfull, Slurrp Farm); millet-flour exporters</td>
+                        <td><span class="tier-pill">Tier 1</span></td>
+                    </tr>
+                    <tr class="tier-1">
+                        <td>
+                            <div class="crop-name">Basmati Rice</div>
+                            <div class="crop-sub">Karnal, Kaithal, Kurukshetra · Kharif</div>
+                        </td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">Oman</span><span class="fta-chip">UK CETA</span><span class="fta-chip">EU FTA</span></div></td>
+                        <td>LT Foods, KRBL, Adani Wilmar; export houses serving Gulf re-export hubs</td>
+                        <td><span class="tier-pill">Tier 1</span></td>
+                    </tr>
+                    <tr class="tier-1">
+                        <td>
+                            <div class="crop-name">Potato (processing varieties)</div>
+                            <div class="crop-sub">FC-1, Atlantic, Lady Rosetta · Rabi</div>
+                        </td>
+                        <td><span class="stars">★★★★<span class="stars-mute">★</span></span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">UK CETA</span><span class="fta-chip">ASEAN</span></div></td>
+                        <td>PepsiCo (Lays/Kurkure), ITC (Bingo), McCain Foods, Iscon Balaji</td>
+                        <td><span class="tier-pill">Tier 1</span></td>
+                    </tr>
+                    <tr class="tier-1">
+                        <td>
+                            <div class="crop-name">Mushrooms (Button)</div>
+                            <div class="crop-sub">Sonipat hub · year-round</div>
+                        </td>
+                        <td><span class="stars">★★★★<span class="stars-mute">★</span></span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">UK CETA</span><span class="fta-chip">EU FTA</span></div></td>
+                        <td>HUL (Knorr), Nestlé, premium retail chains; processed-mushroom exporters</td>
+                        <td><span class="tier-pill">Tier 1</span></td>
+                    </tr>
+                    <tr class="tier-2">
+                        <td>
+                            <div class="crop-name">Maize (sweet corn, popping corn)</div>
+                            <div class="crop-sub">Specific seed varieties · Kharif</div>
+                        </td>
+                        <td><span class="stars">★★★★<span class="stars-mute">★</span></span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">ASEAN</span></div></td>
+                        <td>PepsiCo (popcorn), Cremica, Mother Dairy (sweet-corn frozen); ethanol industry (separate vertical)</td>
+                        <td><span class="tier-pill">Tier 2</span></td>
+                    </tr>
+                    <tr class="tier-2">
+                        <td>
+                            <div class="crop-name">Chickpea (Kabuli &amp; Desi)</div>
+                            <div class="crop-sub">Rabi · drought-tolerant</div>
+                        </td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">UK CETA</span><span class="fta-chip">EU FTA</span></div></td>
+                        <td>Hummus exporters, namkeen producers (Bikaji, Haldiram's), besan-mills</td>
+                        <td><span class="tier-pill">Tier 2</span></td>
+                    </tr>
+                    <tr class="tier-2">
+                        <td>
+                            <div class="crop-name">Mustard Seed</div>
+                            <div class="crop-sub">Rabi · core Haryana crop</div>
+                        </td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">SAFTA</span></div></td>
+                        <td>Adani Wilmar, Patanjali, Saurashtra Oils; mustard-paste exporters</td>
+                        <td><span class="tier-pill">Tier 2</span></td>
+                    </tr>
+                    <tr class="tier-2">
+                        <td>
+                            <div class="crop-name">Honey (mustard-flower)</div>
+                            <div class="crop-sub">Apiculture overlay</div>
+                        </td>
+                        <td><span class="stars">★★★★<span class="stars-mute">★</span></span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">UK CETA</span><span class="fta-chip">EU FTA</span><span class="fta-chip">ASEAN</span></div></td>
+                        <td>Dabur, Patanjali, Apis India; premium-honey exporters</td>
+                        <td><span class="tier-pill">Tier 2</span></td>
+                    </tr>
+                    <tr class="tier-3">
+                        <td>
+                            <div class="crop-name">Quinoa · Amaranth</div>
+                            <div class="crop-sub">Experimental in north India · Rabi</div>
+                        </td>
+                        <td><span class="stars">★★★<span class="stars-mute">★★</span></span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">EU FTA</span><span class="fta-chip">UK CETA</span></div></td>
+                        <td>Premium health-food exporters, specialist startups</td>
+                        <td><span class="tier-pill">Tier 3</span></td>
+                    </tr>
+                    <tr class="tier-3">
+                        <td>
+                            <div class="crop-name">Onion · Garlic (storable varieties)</div>
+                            <div class="crop-sub">Rabi · dehydration grade</div>
+                        </td>
+                        <td><span class="stars">★★★<span class="stars-mute">★★</span></span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">ASEAN</span><span class="fta-chip">UK CETA</span></div></td>
+                        <td>Jain Irrigation (dehydration), Cremica, frozen-food exporters</td>
+                        <td><span class="tier-pill">Tier 3</span></td>
+                    </tr>
+                    <tr class="tier-3">
+                        <td>
+                            <div class="crop-name">Spices (cumin, coriander, fenugreek)</div>
+                            <div class="crop-sub">Rabi · semi-arid south Haryana</div>
+                        </td>
+                        <td><span class="stars">★★★★<span class="stars-mute">★</span></span></td>
+                        <td><div class="fta-chips"><span class="fta-chip">UAE CEPA</span><span class="fta-chip">UK CETA</span><span class="fta-chip">EU FTA</span></div></td>
+                        <td>MDH, Everest, Catch, premium spice-exporters</td>
+                        <td><span class="tier-pill">Tier 3</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout moss">
+            <div class="callout-label">Where to plant your flag first</div>
+            <strong>Millets + Mushrooms.</strong> Millets because the UK CETA + EU FTA + India's "Year of Millets" momentum is converging, AND Indian health-snack manufacturers are paying premium contract-farming rates. Mushrooms because Sonipat already has the production cluster — you're building on a base, not from zero. Both are Tier-1 with relatively short proof-cycles.
+        </div>
+
+        <h3 class="subhead">Why these three crops did NOT make Tier 1</h3>
+        <p><strong>Wheat:</strong> Haryana's dominant crop is also India's most politically protected one. FTA partners have only modest tariff cuts, and MSP-driven domestic procurement crowds out export-oriented contract farming. Skip for now.</p>
+        <p><strong>Sugarcane:</strong> Mill-procurement system locks farmers into co-operative sugar-mill cycles. Hard to insert a bridge consultancy.</p>
+        <p><strong>Cotton:</strong> Long, complex value chain dominated by ginners. Possible later, not first.</p>
+    </div>
+</section>
+
+<!-- ============================================
+     3 · BUSINESS MODELS
+     ============================================ -->
+<section class="chapter" id="models">
+    <div class="chapter-num">Chapter 03</div>
+    <h2 class="chapter-title">Six Business Models — and which earn their keep.</h2>
+    <p class="chapter-deck">Six legitimate business archetypes for an agri-export bridge. Each evaluated on capital required, time-to-revenue, risk, and leverage. Stack ratings predict which combine well.</p>
+
+    <div class="chapter-body">
+        <div class="models-grid">
+
+            <div class="model-card">
+                <div class="model-num">01</div>
+                <h3 class="model-name">The Pure Aggregator</h3>
+                <p class="model-desc">You buy from farmers, store, sort, sell to manufacturers. Owns inventory and price risk.</p>
+                <div class="model-meta">
+                    <div class="meta-row"><div class="meta-label">Capital</div><div class="meta-val">High (₹50L–₹2Cr)</div></div>
+                    <div class="meta-row"><div class="meta-label">Time to revenue</div><div class="meta-val">3–6 months</div></div>
+                    <div class="meta-row"><div class="meta-label">Risk</div><div class="meta-val">High</div></div>
+                    <div class="meta-row"><div class="meta-label">Leverage</div><div class="meta-val">Low (capacity-bound)</div></div>
+                </div>
+                <div class="verdict"><strong>Verdict:</strong> Skip in Year 1. Reconsider once you've built buyer-side relationships.</div>
+            </div>
+
+            <div class="model-card recommend">
+                <div class="model-num">02</div>
+                <h3 class="model-name">The FPO Mentor &amp; Catalyst</h3>
+                <p class="model-desc">Help form, train, and run Farmer Producer Organisations. Government schemes (NABARD, SFAC) subsidise FPO formation; you collect fees, retainers, and equity stakes in producer-companies.</p>
+                <div class="model-meta">
+                    <div class="meta-row"><div class="meta-label">Capital</div><div class="meta-val">Low (₹2–5L)</div></div>
+                    <div class="meta-row"><div class="meta-label">Time to revenue</div><div class="meta-val">6–12 months</div></div>
+                    <div class="meta-row"><div class="meta-label">Risk</div><div class="meta-val">Low–medium</div></div>
+                    <div class="meta-row"><div class="meta-label">Leverage</div><div class="meta-val">High (recurring fees)</div></div>
+                </div>
+                <div class="verdict"><strong>Verdict:</strong> The cornerstone. Government tail-wind, low capital, deep relationship moat.</div>
+            </div>
+
+            <div class="model-card recommend">
+                <div class="model-num">03</div>
+                <h3 class="model-name">The Compliance &amp; Certification Bridge</h3>
+                <p class="model-desc">Help FPOs/exporters navigate APEDA registration, GlobalGAP, organic, FSSAI, HACCP, residue-testing protocols. Per-engagement fees plus recurring audit support.</p>
+                <div class="model-meta">
+                    <div class="meta-row"><div class="meta-label">Capital</div><div class="meta-val">Very low (₹50K–₹1L)</div></div>
+                    <div class="meta-row"><div class="meta-label">Time to revenue</div><div class="meta-val">1–3 months</div></div>
+                    <div class="meta-row"><div class="meta-label">Risk</div><div class="meta-val">Low</div></div>
+                    <div class="meta-row"><div class="meta-label">Leverage</div><div class="meta-val">Medium–high</div></div>
+                </div>
+                <div class="verdict"><strong>Verdict:</strong> Stack with #02. Same client, deeper revenue.</div>
+            </div>
+
+            <div class="model-card">
+                <div class="model-num">04</div>
+                <h3 class="model-name">The Trade Mission Facilitator</h3>
+                <p class="model-desc">Organise (or co-organise with state export promotion councils) buyer-seller delegations. Connect Indian FPOs and exporters with FTA-country importers. Facilitation fee plus success-based commission.</p>
+                <div class="model-meta">
+                    <div class="meta-row"><div class="meta-label">Capital</div><div class="meta-val">Low–medium (₹3–10L)</div></div>
+                    <div class="meta-row"><div class="meta-label">Time to revenue</div><div class="meta-val">6–18 months</div></div>
+                    <div class="meta-row"><div class="meta-label">Risk</div><div class="meta-val">Medium</div></div>
+                    <div class="meta-row"><div class="meta-label">Leverage</div><div class="meta-val">Very high per match</div></div>
+                </div>
+                <div class="verdict"><strong>Verdict:</strong> Year-2 expansion. Don't lead with this.</div>
+            </div>
+
+            <div class="model-card recommend">
+                <div class="model-num">05</div>
+                <h3 class="model-name">The Crop-Pivot Advisor</h3>
+                <p class="model-desc">Niche consulting for individual farmers, FPOs, and gentleman-farmer landowners. Soil-suitability + market-demand + financial-return analysis. "Should I shift 20 acres from wheat to bajra-millets next season?" Fees per engagement.</p>
+                <div class="model-meta">
+                    <div class="meta-row"><div class="meta-label">Capital</div><div class="meta-val">Very low (₹50K)</div></div>
+                    <div class="meta-row"><div class="meta-label">Time to revenue</div><div class="meta-val">1–3 months</div></div>
+                    <div class="meta-row"><div class="meta-label">Risk</div><div class="meta-val">Low</div></div>
+                    <div class="meta-row"><div class="meta-label">Leverage</div><div class="meta-val">High (referral-driven)</div></div>
+                </div>
+                <div class="verdict"><strong>Verdict:</strong> Stack with #02. Often the lead-magnet that brings clients to FPO mentoring.</div>
+            </div>
+
+            <div class="model-card">
+                <div class="model-num">06</div>
+                <h3 class="model-name">The Integrated Procurement Pipeline</h3>
+                <p class="model-desc">Operate buy-side procurement on retainer for one or two snack manufacturers. They pay you a percentage of value moved through your FPO network. No inventory ownership; pure facilitation at scale.</p>
+                <div class="model-meta">
+                    <div class="meta-row"><div class="meta-label">Capital</div><div class="meta-val">Medium (₹10–25L)</div></div>
+                    <div class="meta-row"><div class="meta-label">Time to revenue</div><div class="meta-val">12–24 months</div></div>
+                    <div class="meta-row"><div class="meta-label">Risk</div><div class="meta-val">Medium</div></div>
+                    <div class="meta-row"><div class="meta-label">Leverage</div><div class="meta-val">Very high at scale</div></div>
+                </div>
+                <div class="verdict"><strong>Verdict:</strong> Year-3 graduation. Natural endgame of #02 + #03 + #04.</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     4 · COMPOSITE
+     ============================================ -->
+<section class="chapter" id="composite">
+    <div class="chapter-num">Chapter 04</div>
+    <h2 class="chapter-title">The Recommended Composite.</h2>
+    <p class="chapter-deck">Three of the six business models stack into a coherent, low-capital, recurring-revenue practice. These are the ones to start with, in this order.</p>
+
+    <div class="chapter-body">
+        <div class="stack-diagram">
+            <div class="stack-layer">
+                <div class="stack-num">05</div>
+                <div class="stack-content">
+                    <div class="stack-name">Crop-Pivot Advisor — your lead generator</div>
+                    <div class="stack-why">Start here. The fastest cash-flow, the cheapest customer-acquisition. Each pivot engagement reveals which farmers might benefit from FPO formation. Word-of-mouth in farming communities compounds.</div>
+                </div>
+            </div>
+            <div class="stack-layer">
+                <div class="stack-num">02</div>
+                <div class="stack-content">
+                    <div class="stack-name">FPO Mentor — your relationship moat</div>
+                    <div class="stack-why">Convert pivot-advisor clients into FPO clusters. NABARD/SFAC schemes pay for formation. You earn fees, then equity in producer companies, and create a deep relationship moat that no aggregator can replicate.</div>
+                </div>
+            </div>
+            <div class="stack-layer">
+                <div class="stack-num">03</div>
+                <div class="stack-content">
+                    <div class="stack-name">Compliance Bridge — your retention engine</div>
+                    <div class="stack-why">FPOs need APEDA, FSSAI, organic, GlobalGAP certification to access FTA-driven premium prices. Recurring audit and renewal fees turn one-off engagements into multi-year contracts.</div>
+                </div>
+            </div>
+        </div>
+
+        <p>Each layer feeds the next. A landowner who hires you for a pivot decision often becomes a node in a future FPO. An FPO you've helped form needs compliance support to actually capture FTA tariff benefits. Compliance work generates the data and credibility that make trade-mission facilitation (#04) and integrated procurement (#06) credible expansions in Years 2–3.</p>
+
+        <div class="callout indigo">
+            <div class="callout-label">Total Year-1 capital requirement (estimate)</div>
+            <strong>₹3–8 lakh.</strong> Travel, basic legal, company registration, software, certification training fees, modest marketing. No physical infrastructure. Most of this can come from existing pension/farm-contract income without external funding.
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     5 · POSITIONING
+     ============================================ -->
+<section class="chapter" id="positioning">
+    <div class="chapter-num">Chapter 05</div>
+    <h2 class="chapter-title">Self-Positioning — four audience scripts.</h2>
+    <p class="chapter-deck">The same business needs four distinct introductions. Each audience cares about something different. Use the script that fits the room.</p>
+
+    <div class="chapter-body">
+        <div class="scripts">
+
+            <div class="script">
+                <div class="script-aud">
+                    <span class="audience-tag">For Farmers / FPO Leaders</span>
+                    <span class="script-title">Speak in terms of guaranteed buyers and lower risk.</span>
+                </div>
+                <blockquote class="script-quote">"Mera kaam yahi hai ki mein pehle se hi pata kar leta hoon ki Bharat ke kaunse export buyers Haryana ke kis fasal ke liye kitna aur kab tak chahiye. Aap log apna risk kam karna chahte hain — ki bo to liya, par kharidegaa kaun? Mein woh contract pehle laata hoon, fir bovai ki salaah deta hoon. APEDA aur GlobalGAP jaise certifications bhi mein hi karwa deta hoon, taaki aapki upaj ka daam zyada mile."</blockquote>
+                <div class="script-note"><strong>Translation:</strong> "My job is to know in advance which Indian export buyers want which Haryana crop, in what quantity, by when. Farmers want lower risk — that the buyer is guaranteed before sowing. I bring the contract first, then advise on planting. APEDA and GlobalGAP certifications I handle too, so your produce earns the premium price." Trust language matters more than English jargon here.</div>
+            </div>
+
+            <div class="script">
+                <div class="script-aud">
+                    <span class="audience-tag">For Snack/Food Manufacturer Procurement Teams</span>
+                    <span class="script-title">Speak in terms of supply consistency and traceability.</span>
+                </div>
+                <blockquote class="script-quote">"I work with organised FPO clusters across Haryana that grow specifically to processing-grade specifications. We deliver three things your current commission-agent supply can't: documented traceability from field to your dock, certified compliance with whichever export standard your customer asks for — APEDA, FSSAI, GlobalGAP, organic — and a written supply commitment for the season. I'm not asking you to switch all sourcing. Pilot one truckload. If consistency holds, scale next season."</blockquote>
+                <div class="script-note">Procurement managers respond to risk-reduction language and pilot-first asks. They've heard a thousand "guaranteed quality" pitches.</div>
+            </div>
+
+            <div class="script">
+                <div class="script-aud">
+                    <span class="audience-tag">For FTA-Country Trade Representatives (UK DBT, UAE Embassy, EU Commission Delhi)</span>
+                    <span class="script-title">Speak in terms of bilateral-trade enablement, not personal business.</span>
+                </div>
+                <blockquote class="script-quote">"I'm building infrastructure that translates the new India-{country} agreement into actual MSME-level supply for your importers. Most Indian agri-clusters can't access the tariff windfall because they don't have the compliance and aggregation layer. I'd value thirty minutes to understand which crops your import-side buyers most want from India — so I can return with concrete supply commitments from FPOs aligned to that demand. This benefits both sides of the agreement."</blockquote>
+                <div class="script-note">Embassy commercial sections are evaluated on bilateral-trade outcomes. Position yourself as enabling their KPIs, not asking for help.</div>
+            </div>
+
+            <div class="script">
+                <div class="script-aud">
+                    <span class="audience-tag">For Family / Investors / Yourself in the Mirror</span>
+                    <span class="script-title">Speak in terms of capital-light, recurring, multi-generational.</span>
+                </div>
+                <blockquote class="script-quote">"This is a low-capital consultancy that converts new FTA tariff windfalls into recurring advisory income. Capital required Year 1 is modest. Revenue arrives in months, not years. The relationships compound over time — FPOs we help form become long-term retainer clients. The work is location-independent enough that family members can join later if they want, and it's tied to land-economy, which is what our family already understands."</blockquote>
+                <div class="script-note">This is the script you tell yourself when you wonder if it's worth starting. Pin it somewhere visible.</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     6 · NINETY DAYS
+     ============================================ -->
+<section class="chapter" id="ninety">
+    <div class="chapter-num">Chapter 06</div>
+    <h2 class="chapter-title">First 90 Days — the action plan.</h2>
+    <p class="chapter-deck">Concrete, sequenced. Each block delivers a deliverable that compounds into the next. Designed to spend under ₹2 lakh in the first three months.</p>
+
+    <div class="chapter-body">
+        <div class="timeline">
+
+            <div class="week-block">
+                <div class="week-label">Week 1–2</div>
+                <div class="week-tasks">
+                    <h4 class="week-h">Orientation &amp; Mapping</h4>
+                    <ul class="week-list">
+                        <li>Register a sole-proprietorship or LLP. Open current account. Apply for IEC code via DGFT.</li>
+                        <li>Visit APEDA's Delhi office; collect exporter-orientation literature.</li>
+                        <li>Download NABARD and SFAC FPO scheme guidelines. Understand the equity-grant structure.</li>
+                        <li>Compile a list of all existing FPOs in Haryana via SFAC's directory; identify five with track records in your target crops.</li>
+                        <li>Map five snack-manufacturer procurement centres within 200 km of your operating base.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="week-block">
+                <div class="week-label">Week 3–4</div>
+                <div class="week-tasks">
+                    <h4 class="week-h">Field Research — both sides</h4>
+                    <ul class="week-list">
+                        <li>Visit at least three FPOs in person. Listen, don't pitch. Document what they grow, who they sell to, what price gaps frustrate them.</li>
+                        <li>Visit two manufacturer procurement centres. Same listening posture. What quality gaps cost them money? What's their procurement calendar?</li>
+                        <li>Identify ONE crop where a clear supply gap exists between FPO capacity and buyer demand.</li>
+                        <li>Read the relevant FTA chapter on that crop in the Trade Atlas. Understand exactly what the destination tariff cut is.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="week-block">
+                <div class="week-label">Month 2</div>
+                <div class="week-tasks">
+                    <h4 class="week-h">Pilot Construction</h4>
+                    <ul class="week-list">
+                        <li>Pick the crop, the FPO, the buyer. Draft a contract-farming MOU template in plain language (Hindi version too).</li>
+                        <li>Identify the certification(s) required for the buyer's onward export channel. Draw up the compliance pathway and cost.</li>
+                        <li>Calculate farmer-gate price needed to make the pivot worthwhile. Negotiate buyback terms with the manufacturer.</li>
+                        <li>Document everything as a case study template — you'll reuse this for clients 2 through 50.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="week-block">
+                <div class="week-label">Month 3</div>
+                <div class="week-tasks">
+                    <h4 class="week-h">First Engagement &amp; First Revenue</h4>
+                    <ul class="week-list">
+                        <li>Execute the pilot. Even a small pilot — 50 acres, ₹15 lakh trade value — is enough to anchor a case study.</li>
+                        <li>Issue your first Crop-Pivot Advisory invoice. Even a modest fee establishes the principle.</li>
+                        <li>Apply for FPO formation grant on behalf of the cluster (NABARD/SFAC route). This brings in formation fees.</li>
+                        <li>Build a simple website. List the case study. Send the link, with a short personal note, to ten more potential clients.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     7 · REALITY CHECK
+     ============================================ -->
+<section class="chapter" id="reality">
+    <div class="chapter-num">Chapter 07</div>
+    <h2 class="chapter-title">Reality Check — what nobody tells you.</h2>
+    <p class="chapter-deck">Six honest risks. Pretending they don't exist is the fastest way to fail. Naming them lets you plan around them.</p>
+
+    <div class="chapter-body">
+
+        <div class="callout warning">
+            <div class="callout-label">Risk 01 — Middleman resistance</div>
+            APMC mandi commission agents and existing aggregators have political and economic power. A bridge consultancy disintermediates them. Expect quiet resistance — delayed permissions, unflattering rumours, cooperative-bank obstacles. <strong>Counter:</strong> partner where you can; don't pick public fights early.
+        </div>
+
+        <div class="callout warning">
+            <div class="callout-label">Risk 02 — Quality consistency takes time</div>
+            FTA buyers reject inconsistent batches harder than domestic mandi buyers. A first failed shipment can break a buyer relationship. <strong>Counter:</strong> over-invest in farmer-training before promising consistency. Pilot small. Disclose limitations.
+        </div>
+
+        <div class="callout warning">
+            <div class="callout-label">Risk 03 — Payment cycles bite</div>
+            Indian FMCG procurement payment cycles run 60–90 days. Farmers expect cash in 7. The working capital sits with someone — make sure it's not you. <strong>Counter:</strong> structure FPO bank facilities or use platforms like Samunnati for receivables financing.
+        </div>
+
+        <div class="callout warning">
+            <div class="callout-label">Risk 04 — Tariff cuts don't auto-translate to farmer premiums</div>
+            UK CETA's duty-free entry for millets does not mean the Karnal farmer gets a windfall. The premium gets captured along the value chain. <strong>Counter:</strong> negotiate explicit price-sharing in contract-farming MOUs; tie farmer-gate price to a published export-price index.
+        </div>
+
+        <div class="callout warning">
+            <div class="callout-label">Risk 05 — Government scheme bureaucracy</div>
+            FPO grants involve paperwork that takes 6–9 months. Don't promise farmers grant money on a 90-day timeline. <strong>Counter:</strong> structure your fees so they don't depend solely on grant disbursement timing.
+        </div>
+
+        <div class="callout warning">
+            <div class="callout-label">Risk 06 — Real time-to-revenue may be 12 months, not 90 days</div>
+            The first 90-day plan is for momentum and validation, not full income replacement. Plan the first year with a financial cushion that doesn't pressure premature revenue. <strong>Counter:</strong> keep your existing pension and farm-contract income flowing while this builds; this is a stack-on, not a pivot-from.
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================
+     8 · MULTI-GEN
+     ============================================ -->
+<section class="chapter" id="multigen">
+    <div class="chapter-num">Chapter 08</div>
+    <h2 class="chapter-title">The Multi-Generational Lens.</h2>
+    <p class="chapter-deck">Why this fits the larger wealth-transfer thesis you've been building elsewhere — and how the next generation could plug in if they choose to.</p>
+
+    <div class="chapter-body">
+
+        <div class="multigen-box">
+            <h3 class="multigen-h">A relationship-based asset that compounds across decades</h3>
+            <p>The 6-Jar wealth framework treats long-term wealth as a portfolio of assets that throw off recurring cash flow. A bridge consultancy fits exactly this profile: relationships with FPOs, manufacturers, and trade reps appreciate in value over time. Unlike land or financial instruments, this asset is portable, low-tax-friction, and operationally light. It also has natural succession optionality — Sam's farmland could function as a demonstration plot showcasing the crop pivots you advise others on, while the consultancy itself could absorb a child or successor whenever they're ready, without forcing them in.</p>
+        </div>
+
+        <div class="callout indigo">
+            <div class="callout-label">Optional pathways for the next generation</div>
+            None of these need pursuing now — they exist as <strong>open doors</strong>: Sam's land becomes a Tier-1 demonstration plot for the Bridge consultancy's millet/mushroom case studies. Pepin (post-2028 marriage) might choose to enter the consultancy in a marketing, certification, or international-relations role if her interests align — or not at all. The point is the consultancy is portable and absorptive, not coercive.
+        </div>
+
+        <p>A practical anchor: register the consultancy as a private limited company from Year 2, even if you operate as a sole proprietor in Year 1. The corporate structure makes future equity participation by family members clean and non-disruptive.</p>
+
+    </div>
+</section>
+
+<!-- ============================================
+     9 · RESOURCES
+     ============================================ -->
+<section class="chapter" id="resources">
+    <div class="chapter-num">Chapter 09</div>
+    <h2 class="chapter-title">Resources &amp; Further Research.</h2>
+    <p class="chapter-deck">The institutional landscape you'll be working within. Most of these are free public resources; learning to navigate them is itself a competitive advantage.</p>
+
+    <div class="chapter-body">
+
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h4>APEDA</h4>
+                <p>Agricultural and Processed Food Products Export Development Authority. Mandatory registration for agri-product exporters. Maintains scheme-specific incentives. <code>apeda.gov.in</code></p>
+            </div>
+            <div class="resource-card">
+                <h4>NABARD FPO Scheme</h4>
+                <p>Equity grant up to ₹15 lakh per FPO + management cost reimbursement. Operates through NABARD-empanelled Cluster-Based Business Organisations. <code>nabard.org</code></p>
+            </div>
+            <div class="resource-card">
+                <h4>SFAC</h4>
+                <p>Small Farmers' Agribusiness Consortium. Parallel FPO formation channel; runs the Equity Grant Fund and Credit Guarantee Fund. <code>sfacindia.com</code></p>
+            </div>
+            <div class="resource-card">
+                <h4>DGFT &amp; IEC</h4>
+                <p>Importer-Exporter Code. Mandatory for any export. Free to obtain online; takes 2–5 working days. <code>dgft.gov.in</code></p>
+            </div>
+            <div class="resource-card">
+                <h4>Indian Trade Portal</h4>
+                <p>Comprehensive tariff lookup across all FTAs. Verify HS-code-level preferential rates before committing to any deal. <code>indiantradeportal.in</code></p>
+            </div>
+            <div class="resource-card">
+                <h4>State Export Promotion (Haryana)</h4>
+                <p>Haryana State Industrial &amp; Infrastructure Development Corporation handles state-level export-promotion schemes. <code>hsiidc.org.in</code></p>
+            </div>
+            <div class="resource-card">
+                <h4>FSSAI</h4>
+                <p>Food Safety and Standards Authority of India. Required for any processed-food handling. Operates a tiered licence system by turnover.</p>
+            </div>
+            <div class="resource-card">
+                <h4>GlobalGAP / Organic India</h4>
+                <p>Private certification bodies for export-grade quality. Several Haryana-based auditors. Cost: ₹50K–₹2L per FPO depending on scope.</p>
+            </div>
+            <div class="resource-card">
+                <h4>Mission Millets (IIMR)</h4>
+                <p>Indian Institute of Millets Research. Variety recommendations, agronomy, and procurement-network introductions. Hyderabad-based but national-scope.</p>
+            </div>
+        </div>
+
+        <div class="callout">
+            <div class="callout-label">Suggested next research, in priority order</div>
+            <ol style="margin: 8px 0 0 16px; padding: 0;">
+                <li style="margin-bottom: 6px;">Three nearest existing FPOs by district (your initial mentees or competitors).</li>
+                <li style="margin-bottom: 6px;">Procurement-team contacts at PepsiCo Sahibabad, ITC Foods Gurugram, Haldiram's Sonipat, and Bikaji Bikaner.</li>
+                <li style="margin-bottom: 6px;">UK DBT trade office in Delhi and UAE Embassy commercial section — calendar of trade events for 2026.</li>
+                <li style="margin-bottom: 6px;">Recent NABARD circular on FPO equity-grant ceilings (these revise annually).</li>
+                <li>Two organic-certification auditors operating in north India — get their fee schedules.</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================
+     10 · CLOSING
+     ============================================ -->
+<section class="chapter" id="closing">
+    <div class="chapter-num">Chapter 10</div>
+    <h2 class="chapter-title">Closing Reflection.</h2>
+    <div class="chapter-body">
+        <p>You spotted a real gap. The FTA architecture has changed faster than the ground-level information ecosystem in Indian agriculture has. That mismatch is exactly where new consulting practices get built — not by people with the loudest claims, but by those who do the patient work of translation between three audiences who don't fully speak each other's language.</p>
+
+        <p>The honest read: this is doable, low-capital, and aligned with momentum. It will not make you rich in Year 1. It is plausibly a ₹40–80 lakh annual practice by Year 3 with the composite stack, scaling further if you choose to add procurement-pipeline (#06) or trade-mission (#04) layers. More importantly, it builds an asset of relationships and credibility that compound longer than any single contract.</p>
+
+        <p>And critically: <strong>you don't have to commit today</strong>. The first 90 days of the action plan is itself a low-cost diligence exercise. If after three months the field research tells you the gap is smaller than it looks, or the bureaucratic friction is higher than you can stomach, you've spent ₹2 lakh and learned something irreplaceable. If it works, you've laid the foundation for the practice.</p>
+
+        <div class="closing-box">
+            <div class="closing-eyebrow">Recall question — for retention</div>
+            <p class="closing-q">If a Karnal farmer with 8 acres of irrigated land asked you tonight, "what should I plant in the next Rabi season to capture the new FTA premiums?" — what would you say first, and which two things would you ask before answering?</p>
+            <p class="closing-hint">Hint: the answer isn't a crop name. It's a soil test, a buyer-end commitment, and an honest disclosure about your current advisory engagement (you're not yet running a free service — and that's fine). The crop choice from the matrix follows AFTER those three. If this comes back to you naturally, it's a sign the playbook has stuck. If not, scroll back to Chapter 06 — Month 2 — and re-read the pilot-construction sequence. 🙏</p>
+        </div>
+    </div>
+</section>
+
+<footer class="colophon">
+    <p><strong>Companion document.</strong> This playbook leans on facts and FTA structures established in the <a href="india-fta-explorer.html">India Trade Atlas</a>. Cross-reference whenever an agreement, tariff figure, or compliance term needs verification.</p>
+    <p style="margin-top:14px;"><strong>Caveats.</strong> Indian agriculture, government scheme parameters, and FTA tariff phasings change frequently. Treat all figures as directionally accurate as of April 2026 and verify against current DGFT, APEDA, and NABARD notifications before commercial commitments. This document is strategic guidance, not legal, tax, or business-plan advice.</p>
+    <p style="margin-top:14px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;">Strategic Playbook · Vol II of the Trade Atlas Series · Compiled April 2026 · Single-file reference</p>
+</footer>
+
+</div>
+</main>
+
+<!-- ============================================
+     ACRONYM TOOLTIP SYSTEM
+     (subset of glossary, focused on this document)
+     ============================================ -->
+<script>
+const GLOSSARY = {
+    'FTA':       {full: 'Free Trade Agreement', desc: 'A treaty between two or more countries that reduces or eliminates tariffs and barriers on substantially all trade. The Trade Atlas explores all 22 of India\'s FTAs in depth.'},
+    'CETA':      {full: 'Comprehensive Economic and Trade Agreement (UK)', desc: 'India-UK CETA, in force from April 2026. 99% of Indian exports duty-free. Includes the Double Contribution Convention exempting short-term Indian assignees from UK NIC.'},
+    'CEPA':      {full: 'Comprehensive Economic Partnership Agreement', desc: 'A deeper agreement covering goods, services, investment, and regulatory cooperation. Examples: India-UAE CEPA, India-Oman CEPA, India-Japan CEPA.'},
+    'EU FTA':    {full: 'India-European Union Free Trade Agreement', desc: 'Concluded January 2026. Largest-ever Indian FTA covering 27 EU member states. 90.7% of India\'s EU exports become duty-free at entry into force. Ratification expected end-2026.'},
+    'UK CETA':   {full: 'India-UK Comprehensive Economic and Trade Agreement', desc: 'In force from April 2026. 99% of Indian exports duty-free. Whisky tariff cut from 150% to 75% on Day 1. Major win for IT services via the Double Contribution Convention.'},
+    'UAE CEPA':  {full: 'India-UAE Comprehensive Economic Partnership Agreement', desc: 'In force since 2022. Negotiated in just 88 days. Bilateral trade now exceeds US$100 billion annually.'},
+    'ASEAN':     {full: 'Association of Southeast Asian Nations', desc: '10-country bloc; India has had a Goods FTA since 2010 and Services & Investment agreements since 2015.'},
+    'SAFTA':     {full: 'South Asian Free Trade Area', desc: '8-country South Asian regional FTA in force since 2006. Includes Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, Sri Lanka, Afghanistan.'},
+
+    'APEDA':     {full: 'Agricultural and Processed Food Products Export Development Authority', desc: 'India\'s statutory body promoting agri-product exports. Maintains export-incentive schemes. Mandatory registration for agri exporters.'},
+    'NABARD':    {full: 'National Bank for Agriculture and Rural Development', desc: 'India\'s apex development bank for rural and agricultural finance. Runs the Producer Organisation Development Fund and FPO formation grants.'},
+    'SFAC':      {full: 'Small Farmers\' Agribusiness Consortium', desc: 'Society under the Ministry of Agriculture promoting FPO formation. Operates the Equity Grant Fund and Credit Guarantee Fund.'},
+    'FPO':       {full: 'Farmer Producer Organisation', desc: 'A legal entity (usually a Producer Company under Indian Companies Act) formed by farmers to aggregate produce, access markets, and capture more of the value chain. Government-subsidised formation under SFAC and NABARD schemes.'},
+    'DGFT':      {full: 'Directorate General of Foreign Trade (India)', desc: 'Indian agency administering import-export policy. Issues IEC codes, export licences, and Certificates of Origin.'},
+    'IEC':       {full: 'Importer-Exporter Code', desc: 'A 10-digit code issued by DGFT. Mandatory for any export from or import into India. Free, online, takes 2–5 working days.'},
+    'APMC':      {full: 'Agricultural Produce Market Committee', desc: 'State-government regulated agri-market system. Commission agents (arhatiyas) operate within APMC mandis. Reform efforts are gradually reducing APMC monopoly but it remains powerful.'},
+    'MSP':       {full: 'Minimum Support Price', desc: 'Government-announced floor price for selected crops (notably wheat, rice, pulses). Procured by FCI and state agencies. Distorts crop choice toward MSP-protected crops.'},
+    'FSSAI':     {full: 'Food Safety and Standards Authority of India', desc: 'India\'s food safety regulator. Tiered licence system based on turnover. Mandatory for any food handling, processing, or trade.'},
+    'GlobalGAP': {full: 'Global Good Agricultural Practices', desc: 'Private international standard for safe, sustainable agricultural production. Required by many EU and UK food retailers. Audit-based certification.'},
+    'HACCP':     {full: 'Hazard Analysis and Critical Control Points', desc: 'Internationally recognised food-safety management system. Required for many processed-food export channels.'},
+    'MOU':       {full: 'Memorandum of Understanding', desc: 'A formal but non-statutory agreement between parties. Often used in contract-farming arrangements before full legal contracts. Captures intent, price formula, quality specs, and timing.'},
+    'MSME':      {full: 'Micro, Small and Medium Enterprises', desc: 'Indian classification of enterprises by investment and turnover thresholds. Many FTAs and government schemes specifically target MSME-friendly outcomes.'},
+    'LLP':       {full: 'Limited Liability Partnership', desc: 'A flexible Indian business structure combining partnership flexibility with limited liability. Lower compliance burden than a private limited company. Often the right starting structure for a consultancy.'},
+    'HS':        {full: 'Harmonised System', desc: 'WCO\'s global product-classification system. 6-digit codes group products into 99 chapters. Used to look up tariffs in any FTA.'},
+    'NIC':       {full: 'National Insurance Contributions (UK)', desc: 'UK social-security tax. The India-UK Double Contribution Convention exempts short-term Indian assignees from UK NIC for up to 36 months.'},
+    'ITC':       {full: 'ITC Limited', desc: 'Indian conglomerate with major FMCG operations. Bingo (snacks), Aashirvaad (foods), and procurement footprint across north India.'},
+    'FMCG':      {full: 'Fast-Moving Consumer Goods', desc: 'High-volume, low-margin consumer products. Snack-food manufacturers fall under this category.'},
+    'MDH':       {full: 'Mahashian Di Hatti (MDH Spices)', desc: 'Major Indian spice brand. Sources extensively from north Indian spice belts.'},
+    'HUL':       {full: 'Hindustan Unilever Limited', desc: 'Indian arm of Unilever. Operates Knorr, Kissan, and other food brands sourcing from Indian farms.'}
+};
+
+const ACRONYMS_BY_LENGTH = Object.keys(GLOSSARY).sort((a, b) => b.length - a.length);
+
+function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function wrapAcronyms(rootEl) {
+    const skipTags = new Set(['ABBR', 'CODE', 'A', 'SCRIPT', 'STYLE', 'INPUT', 'BUTTON', 'SELECT']);
+
+    function processTextNode(node) {
+        const text = node.textContent;
+        const matches = [];
+
+        ACRONYMS_BY_LENGTH.forEach(acr => {
+            const escaped = escapeRegex(acr);
+            const regex = new RegExp(`(^|[^A-Za-z0-9])(${escaped})(?=$|[^A-Za-z0-9])`, 'g');
+            let m;
+            while ((m = regex.exec(text)) !== null) {
+                const start = m.index + m[1].length;
+                matches.push({start, length: acr.length, acr});
+            }
+        });
+
+        if (matches.length === 0) return;
+        matches.sort((a, b) => a.start - b.start || b.length - a.length);
+        const filtered = [];
+        let lastEnd = 0;
+        matches.forEach(m => {
+            if (m.start >= lastEnd) {
+                filtered.push(m);
+                lastEnd = m.start + m.length;
+            }
+        });
+        if (filtered.length === 0) return;
+
+        const frag = document.createDocumentFragment();
+        let cursor = 0;
+        filtered.forEach(m => {
+            if (m.start > cursor) {
+                frag.appendChild(document.createTextNode(text.substring(cursor, m.start)));
+            }
+            const abbr = document.createElement('abbr');
+            abbr.className = 'gloss';
+            abbr.dataset.acr = m.acr;
+            abbr.setAttribute('title', GLOSSARY[m.acr].full);
+            abbr.setAttribute('tabindex', '0');
+            abbr.setAttribute('aria-expanded', 'false');
+            abbr.textContent = m.acr;
+            frag.appendChild(abbr);
+            cursor = m.start + m.length;
+        });
+        if (cursor < text.length) {
+            frag.appendChild(document.createTextNode(text.substring(cursor)));
+        }
+        node.parentNode.replaceChild(frag, node);
+    }
+
+    function walk(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+            processTextNode(node);
+            return;
+        }
+        if (node.nodeType !== Node.ELEMENT_NODE) return;
+        if (skipTags.has(node.tagName)) return;
+        const kids = [...node.childNodes];
+        kids.forEach(walk);
+    }
+    walk(rootEl);
+}
+
+let tooltipEl = null;
+let activeAbbr = null;
+
+function ensureTooltip() {
+    if (tooltipEl) return tooltipEl;
+    tooltipEl = document.createElement('div');
+    tooltipEl.className = 'tooltip-pop';
+    tooltipEl.setAttribute('role', 'tooltip');
+    document.body.appendChild(tooltipEl);
+    return tooltipEl;
+}
+
+function showTooltip(abbr) {
+    const acr = abbr.dataset.acr;
+    const entry = GLOSSARY[acr];
+    if (!entry) return;
+    const tip = ensureTooltip();
+    tip.innerHTML = `<div class="tt-title">${acr}<span class="tt-full">${entry.full}</span></div><div class="tt-desc">${entry.desc}</div>`;
+
+    const rect = abbr.getBoundingClientRect();
+    tip.style.visibility = 'hidden';
+    tip.classList.add('show');
+    const tipRect = tip.getBoundingClientRect();
+
+    const showAbove = rect.top > tipRect.height + 20;
+    const left = Math.min(
+        Math.max(12, rect.left + rect.width / 2 - tipRect.width / 2),
+        window.innerWidth - tipRect.width - 12
+    );
+    const top = showAbove
+        ? rect.top + window.scrollY - tipRect.height - 12
+        : rect.bottom + window.scrollY + 12;
+
+    tip.style.left = `${left}px`;
+    tip.style.top = `${top}px`;
+    tip.dataset.pos = showAbove ? 'above' : 'below';
+    const arrowLeftPct = ((rect.left + rect.width / 2 - left) / tipRect.width) * 100;
+    tip.style.setProperty('--arrow-left', `${arrowLeftPct}%`);
+    tip.style.visibility = '';
+    abbr.setAttribute('aria-expanded', 'true');
+    activeAbbr = abbr;
+}
+
+function hideTooltip() {
+    if (!tooltipEl) return;
+    tooltipEl.classList.remove('show');
+    if (activeAbbr) {
+        activeAbbr.setAttribute('aria-expanded', 'false');
+        activeAbbr = null;
+    }
+}
+
+function setupTooltipHandlers() {
+    document.addEventListener('mouseover', e => {
+        const abbr = e.target.closest('abbr.gloss');
+        if (abbr && !('ontouchstart' in window)) showTooltip(abbr);
+    });
+    document.addEventListener('mouseout', e => {
+        const abbr = e.target.closest('abbr.gloss');
+        if (!abbr) return;
+        const related = e.relatedTarget;
+        if (related && tooltipEl && tooltipEl.contains(related)) return;
+        if (!('ontouchstart' in window)) hideTooltip();
+    });
+    document.addEventListener('click', e => {
+        const abbr = e.target.closest('abbr.gloss');
+        const insideTip = e.target.closest('.tooltip-pop');
+        if (abbr) {
+            e.preventDefault();
+            if (activeAbbr === abbr) hideTooltip();
+            else showTooltip(abbr);
+        } else if (!insideTip && activeAbbr) {
+            hideTooltip();
+        }
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') hideTooltip(); });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('main, .masthead').forEach(wrapAcronyms);
+    setupTooltipHandlers();
+});
+</script>
+
+</body>
+</html>
