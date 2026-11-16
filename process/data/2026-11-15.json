@@ -1,0 +1,1301 @@
+{
+  "schema_version": "1.0",
+  "brief_date": "2026-11-15",
+  "brief_url": "https://msme.vipulanand.in/briefs/2026-11-15.html",
+  "brief_file": "briefs/2026-11-15.html",
+  "compiled": "2026-11-15",
+  "timezone": "Asia/Kolkata",
+  "extraction_note": "All values transcribed from the published brief only. source_url is null because the brief names its sources but does not link them; fill in when a link is confirmed.",
+  "gaps": [
+    {
+      "section": "grain",
+      "note": "Part of the wheat sub-section (~700 characters) was truncated in the source notes before reaching the brief; those figures are missing here too.",
+      "status": "flag"
+    }
+  ],
+  "figures": [
+    {
+      "id": "cpi_headline_yoy",
+      "group": "macro",
+      "label": "India CPI headline, YoY",
+      "value": 6.09,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-10",
+      "value_text": "6.09%",
+      "source": "MoSPI, 12 Nov",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#cpi",
+      "status": [
+        "fixed",
+        "revised"
+      ]
+    },
+    {
+      "id": "cpi_headline_yoy_prev",
+      "group": "macro",
+      "label": "India CPI headline, YoY (previous month)",
+      "value": 5.54,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-09",
+      "value_text": "5.54%",
+      "source": "MoSPI",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#cpi",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "cpi_change_mom_pp",
+      "group": "macro",
+      "label": "CPI change Sep → Oct",
+      "value": 0.55,
+      "approx": false,
+      "unit": "pp",
+      "as_of": "2026-10",
+      "value_text": "+0.55 pp",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "6.09 − 5.54"
+    },
+    {
+      "id": "cpi_food_bev_yoy",
+      "group": "macro",
+      "label": "CPI food & beverages, YoY",
+      "value": null,
+      "value_min": 8.5,
+      "value_max": 8.9,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-10",
+      "value_text": "8.5–8.9%",
+      "source": "MoSPI",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#cpi",
+      "status": [
+        "reported"
+      ],
+      "note": "Headlines section says food ~8.9%; rural higher than urban."
+    },
+    {
+      "id": "rbi_repo",
+      "group": "macro",
+      "label": "RBI repo rate",
+      "value": 5.5,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-10",
+      "value_text": "5.50%",
+      "source": "RBI",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#rbi",
+      "status": [
+        "revised"
+      ],
+      "note": "+25bp hike in October; stance 'calibrated tightening'."
+    },
+    {
+      "id": "rbi_sdf",
+      "group": "macro",
+      "label": "Standing Deposit Facility rate",
+      "value": 5.25,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-10",
+      "value_text": "5.25%",
+      "source": "RBI",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#rbi",
+      "status": [
+        "reported"
+      ],
+      "note": "repo − 25bp"
+    },
+    {
+      "id": "rbi_msf",
+      "group": "macro",
+      "label": "MSF / Bank Rate",
+      "value": 5.75,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-10",
+      "value_text": "5.75%",
+      "source": "RBI",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#rbi",
+      "status": [
+        "reported"
+      ],
+      "note": "repo + 25bp"
+    },
+    {
+      "id": "sensex_close",
+      "group": "markets",
+      "label": "Sensex close",
+      "value": 81592.45,
+      "approx": false,
+      "unit": "index pts",
+      "as_of": "2026-11-13",
+      "value_text": "81,592.45",
+      "source": "BSE",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "fixed"
+      ]
+    },
+    {
+      "id": "sensex_change",
+      "group": "markets",
+      "label": "Sensex daily change",
+      "value": -0.39,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-13",
+      "value_text": "−0.39%",
+      "source": "BSE",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "fixed"
+      ]
+    },
+    {
+      "id": "nifty50_close",
+      "group": "markets",
+      "label": "Nifty 50 close",
+      "value": 25144.3,
+      "approx": false,
+      "unit": "index pts",
+      "as_of": "2026-11-13",
+      "value_text": "25,144.30",
+      "source": "NSE",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "fixed"
+      ]
+    },
+    {
+      "id": "nifty50_change",
+      "group": "markets",
+      "label": "Nifty 50 daily change",
+      "value": -0.61,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-13",
+      "value_text": "−0.61%",
+      "source": "NSE",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "fixed"
+      ]
+    },
+    {
+      "id": "gsec_10y_yield",
+      "group": "markets",
+      "label": "India 10Y G-Sec yield",
+      "value": 7.31,
+      "approx": true,
+      "unit": "%",
+      "as_of": "2026-11-13",
+      "value_text": "~7.31% (+6bp)",
+      "source": "CCIL",
+      "source_tier": "T1",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "brent_crude",
+      "group": "markets",
+      "label": "Brent crude",
+      "value": null,
+      "value_min": 95,
+      "value_max": 96,
+      "approx": true,
+      "unit": "USD/bbl",
+      "as_of": "2026-11-13",
+      "value_text": "~$95–96",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "reported"
+      ],
+      "note": "Brief does not name a source for this figure."
+    },
+    {
+      "id": "cpo_import_price",
+      "group": "inputs",
+      "label": "Crude palm oil import price",
+      "value": 1141,
+      "approx": false,
+      "unit": "USD/t",
+      "as_of": "2026-11-15",
+      "value_text": "$1,141/t",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "revised"
+      ],
+      "note": "Cut of $33/t effective 14–15 Nov."
+    },
+    {
+      "id": "retail_palm_oil",
+      "group": "inputs",
+      "label": "Retail palm oil",
+      "value": 153,
+      "approx": true,
+      "unit": "INR/kg",
+      "as_of": "2026-11-15",
+      "value_text": "~₹153/kg",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "revised"
+      ]
+    },
+    {
+      "id": "retail_soya_oil",
+      "group": "inputs",
+      "label": "Retail soya oil",
+      "value": 169,
+      "approx": true,
+      "unit": "INR/kg",
+      "as_of": "2026-11-15",
+      "value_text": "~₹169/kg",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#markets",
+      "status": [
+        "revised"
+      ]
+    },
+    {
+      "id": "fd_suryoday_general",
+      "group": "savings",
+      "label": "Suryoday SFB FD, general (5 years)",
+      "value": 8.25,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "8.25%",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#fd",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "fd_suryoday_senior",
+      "group": "savings",
+      "label": "Suryoday SFB FD, senior citizen (5 years)",
+      "value": 8.6,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "8.60%",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#fd",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "fd_utkarsh_general",
+      "group": "savings",
+      "label": "Utkarsh SFB FD, general (666 days)",
+      "value": 8.1,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "8.10%",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#fd",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "fd_utkarsh_senior",
+      "group": "savings",
+      "label": "Utkarsh SFB FD, senior citizen (666 days)",
+      "value": 8.5,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "8.50%",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#fd",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "fd_large_banks",
+      "group": "savings",
+      "label": "Large banks FD (comparison)",
+      "value": null,
+      "value_min": 6.6,
+      "value_max": 7.3,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "6.6–7.3%",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#fd",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "dicgc_cover",
+      "group": "savings",
+      "label": "DICGC deposit insurance cover per depositor per bank",
+      "value": 500000,
+      "approx": false,
+      "unit": "INR",
+      "as_of": "2026-11-15",
+      "value_text": "₹5 lakh",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#fd",
+      "status": [
+        "fixed"
+      ]
+    },
+    {
+      "id": "ncd_muthoot_mercantile_yield",
+      "group": "savings",
+      "label": "Muthoot Mercantile NCD, highest effective yield",
+      "value": 11.57,
+      "approx": true,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "~11.57%",
+      "source": null,
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#ncd",
+      "status": [
+        "flag"
+      ],
+      "note": "Rated ACUITE A (above the BBB/BB+ band asked for) and below 12%. Issue open 12–26 Nov; tenors 13–78 months. Indicative, not an offer."
+    },
+    {
+      "id": "central_pool_wheat",
+      "group": "grain_stocks",
+      "label": "Central pool wheat stock",
+      "value": 46.3,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "46.3",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "buffer_norm_wheat",
+      "group": "grain_stocks",
+      "label": "Buffer norm, wheat",
+      "value": 20.5,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "20.5",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "central_pool_rice",
+      "group": "grain_stocks",
+      "label": "Central pool rice stock",
+      "value": 37.8,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "37.8",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "buffer_norm_rice",
+      "group": "grain_stocks",
+      "label": "Buffer norm, rice",
+      "value": 10.25,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "10.25",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "central_pool_total",
+      "group": "grain_stocks",
+      "label": "Central pool total (wheat + rice)",
+      "value": 84,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "84",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ],
+      "note": "46.3 + 37.8 = 84.1"
+    },
+    {
+      "id": "buffer_norm_total",
+      "group": "grain_stocks",
+      "label": "Buffer norm, total",
+      "value": 31,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "31",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ],
+      "note": "20.5 + 10.25 = 30.75"
+    },
+    {
+      "id": "buffer_multiple_wheat",
+      "group": "grain_stocks",
+      "label": "Central pool ÷ buffer, wheat",
+      "value": 2.26,
+      "approx": false,
+      "unit": "x",
+      "as_of": "2026-10-01",
+      "value_text": "2.26×",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "46.3 ÷ 20.5"
+    },
+    {
+      "id": "buffer_multiple_rice",
+      "group": "grain_stocks",
+      "label": "Central pool ÷ buffer, rice",
+      "value": 3.69,
+      "approx": false,
+      "unit": "x",
+      "as_of": "2026-10-01",
+      "value_text": "3.69×",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "37.8 ÷ 10.25"
+    },
+    {
+      "id": "buffer_multiple_total",
+      "group": "grain_stocks",
+      "label": "Central pool ÷ buffer, total",
+      "value": 2.71,
+      "approx": false,
+      "unit": "x",
+      "as_of": "2026-10-01",
+      "value_text": "2.71×",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "84 ÷ 31"
+    },
+    {
+      "id": "unmilled_paddy",
+      "group": "grain_stocks",
+      "label": "Unmilled paddy (FCI + state agencies)",
+      "value": 26.4,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "26.4",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ],
+      "note": "≈ 17–18 Mt rice equivalent at ~67% out-turn."
+    },
+    {
+      "id": "central_pool_peak",
+      "group": "grain_stocks",
+      "label": "Central pool seasonal peak (June)",
+      "value": 93,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-06",
+      "value_text": "93",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "welfare_need_rice",
+      "group": "grain_stocks",
+      "label": "FCI annual rice need for rations/welfare",
+      "value": 40,
+      "approx": true,
+      "unit": "Mt/yr",
+      "as_of": "2026-11-15",
+      "value_text": "~40",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "welfare_need_wheat",
+      "group": "grain_stocks",
+      "label": "FCI annual wheat need for rations/welfare",
+      "value": 20,
+      "approx": true,
+      "unit": "Mt/yr",
+      "as_of": "2026-11-15",
+      "value_text": "~20",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "surplus_wheat_over_welfare",
+      "group": "grain_stocks",
+      "label": "Wheat surplus above welfare need",
+      "value": 26.3,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "~20+ Mt",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "derived"
+      ],
+      "calc": "46.3 − 20"
+    },
+    {
+      "id": "surplus_rice_over_welfare",
+      "group": "grain_stocks",
+      "label": "Rice surplus above welfare need",
+      "value": 15.5,
+      "approx": true,
+      "unit": "Mt",
+      "as_of": "2026-10-01",
+      "value_text": "~15+ Mt",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "derived",
+        "flag"
+      ],
+      "calc": "37.8 + 17.7 − 40",
+      "note": "Milled rice alone (37.8) is below the 40 Mt need; surplus holds only once unmilled paddy rice-equivalent is added."
+    },
+    {
+      "id": "state_stock_rice",
+      "group": "grain_stocks",
+      "label": "State stocks, rice",
+      "value": 19.7,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "19.7 Mt (2× target)",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "state_stock_wheat",
+      "group": "grain_stocks",
+      "label": "State stocks, wheat",
+      "value": 21.6,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "21.6 Mt (+23%)",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ],
+      "note": "Implies target ≈ 17.6 Mt (derived on the brief)."
+    },
+    {
+      "id": "haryana_paddy_procurement_flowing",
+      "group": "grain_stocks",
+      "label": "Haryana paddy procurement still flowing",
+      "value": 0.6,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "6 lakh t",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "omss_rice_base_price",
+      "group": "grain_prices",
+      "label": "OMSS rice base price",
+      "value": 29,
+      "approx": false,
+      "unit": "INR/kg",
+      "as_of": "2026-11-15",
+      "value_text": "₹29/kg",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ],
+      "note": "vs economic cost above ₹36/kg"
+    },
+    {
+      "id": "fci_economic_cost_rice",
+      "group": "grain_prices",
+      "label": "FCI economic cost, rice (heading toward)",
+      "value": 44,
+      "approx": false,
+      "unit": "INR/kg",
+      "as_of": "2026-11-15",
+      "value_text": "₹44/kg",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "fci_economic_cost_wheat",
+      "group": "grain_prices",
+      "label": "FCI economic cost, wheat (heading toward)",
+      "value": 31,
+      "approx": false,
+      "unit": "INR/kg",
+      "as_of": "2026-11-15",
+      "value_text": "₹31/kg",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "rice_ethanol_diversion",
+      "group": "grain_stocks",
+      "label": "Surplus rice diverted to ethanol blending (through June 2027)",
+      "value": 7.2,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "7.2 Mt",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "damaged_grain_ethanol",
+      "group": "grain_stocks",
+      "label": "Damaged-grain ethanol allocation",
+      "value": 3.8,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "3.8 Mt (tripled)",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "ethanol_share_of_rice_surplus",
+      "group": "grain_stocks",
+      "label": "Ethanol diversion as % of surplus rice",
+      "value": 48,
+      "approx": true,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "~48%",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "7.2 ÷ ~15",
+      "note": "46% if surplus is 15.5 Mt."
+    },
+    {
+      "id": "omss_wheat_sold",
+      "group": "grain_stocks",
+      "label": "FCI OMSS wheat sold (latest round)",
+      "value": 69000,
+      "approx": false,
+      "unit": "t",
+      "as_of": "2026-11-15",
+      "value_text": "69,000 t",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "omss_wheat_offered",
+      "group": "grain_stocks",
+      "label": "FCI OMSS wheat offered (latest round)",
+      "value": 200000,
+      "approx": false,
+      "unit": "t",
+      "as_of": "2026-11-15",
+      "value_text": "200,000 t",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "omss_wheat_sold_pct",
+      "group": "grain_stocks",
+      "label": "OMSS wheat sold vs offered",
+      "value": 34.5,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "34.5%",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "69,000 ÷ 200,000"
+    },
+    {
+      "id": "omss_wheat_sold_since_june",
+      "group": "grain_stocks",
+      "label": "OMSS wheat sold since June",
+      "value": 1.12,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "1.12 Mt",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "omss_rice_target",
+      "group": "grain_stocks",
+      "label": "OMSS rice e-auction target",
+      "value": 5,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "5 Mt (doubled)",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "wheat_production",
+      "group": "production",
+      "label": "Wheat production",
+      "value": null,
+      "value_min": 117,
+      "value_max": 120,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "117–120",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "wheat_domestic_need",
+      "group": "production",
+      "label": "Wheat domestic need",
+      "value": null,
+      "value_min": 60,
+      "value_max": 65,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "60–65",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "rice_production_forecast",
+      "group": "production",
+      "label": "Rice production forecast",
+      "value": 147,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "147 Mt",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "revised"
+      ],
+      "note": "Trimmed for weak monsoon."
+    },
+    {
+      "id": "rice_production_last_year",
+      "group": "production",
+      "label": "Rice production, last year",
+      "value": 154,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "154 Mt",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "rice_production_change_yoy",
+      "group": "production",
+      "label": "Rice production change YoY",
+      "value": -4.5,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "−4.5%",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "(147 − 154) ÷ 154"
+    },
+    {
+      "id": "rice_domestic_need",
+      "group": "production",
+      "label": "Rice domestic need",
+      "value": null,
+      "value_min": 110,
+      "value_max": 115,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "110–115",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "global_demand_wheat",
+      "group": "production",
+      "label": "Global wheat demand",
+      "value": 800,
+      "approx": true,
+      "unit": "Mt/yr",
+      "as_of": "2026-11-15",
+      "value_text": "~800",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "global_demand_rice",
+      "group": "production",
+      "label": "Global rice demand",
+      "value": null,
+      "value_min": 520,
+      "value_max": 540,
+      "approx": false,
+      "unit": "Mt/yr",
+      "as_of": "2026-11-15",
+      "value_text": "520–540",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "wheat_surplus_pct_need",
+      "group": "production",
+      "label": "Wheat surplus as % of domestic need",
+      "value": 90,
+      "value_min": 80,
+      "value_max": 100,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "~80%+",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived",
+        "flag"
+      ],
+      "calc": "midpoints (118.5 − 62.5) ÷ 62.5 ≈ 90%; range 52/65 = 80% to 60/60 = 100%",
+      "note": "80% is the floor, not the midpoint."
+    },
+    {
+      "id": "rice_surplus_pct_need",
+      "group": "production",
+      "label": "Rice surplus as % of domestic need",
+      "value": 31,
+      "value_min": 28,
+      "value_max": 34,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "~30%",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "35 ÷ 112.5"
+    },
+    {
+      "id": "india_wheat_share_global",
+      "group": "production",
+      "label": "India wheat as % of global demand",
+      "value": 14.8,
+      "approx": true,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "~15%",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "118.5 ÷ 800"
+    },
+    {
+      "id": "india_rice_share_global",
+      "group": "production",
+      "label": "India rice as % of global demand",
+      "value": null,
+      "value_min": 27.2,
+      "value_max": 28.3,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "~27–28%",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "147 ÷ 540; 147 ÷ 520"
+    },
+    {
+      "id": "wheat_5mt_export_pct_crop",
+      "group": "production",
+      "label": "5 Mt wheat export as % of India's crop",
+      "value": 4.2,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "value_text": "~4%",
+      "source": null,
+      "source_tier": null,
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#pct",
+      "status": [
+        "derived"
+      ],
+      "calc": "5 ÷ 118.5"
+    },
+    {
+      "id": "rice_exports_expected",
+      "group": "trade",
+      "label": "Rice exports expected",
+      "value": null,
+      "value_min": 23,
+      "value_max": 25,
+      "approx": false,
+      "unit": "Mt",
+      "as_of": "2026-11-15",
+      "value_text": "23–25 Mt",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "revised"
+      ]
+    },
+    {
+      "id": "nonbasmati_white_rice_floor",
+      "group": "trade",
+      "label": "Non-basmati white rice export allowed above",
+      "value": 490,
+      "approx": false,
+      "unit": "USD/t",
+      "as_of": "2026-09",
+      "value_text": "$490/t",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "revised"
+      ]
+    },
+    {
+      "id": "parboiled_rice_duty",
+      "group": "trade",
+      "label": "Parboiled rice export duty (after cut from 20%)",
+      "value": 10,
+      "approx": false,
+      "unit": "%",
+      "as_of": "2026-09",
+      "value_text": "20% → 10%",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "revised"
+      ]
+    },
+    {
+      "id": "broken_parboiled_price",
+      "group": "trade",
+      "label": "5% broken parboiled rice price (5-year high)",
+      "value": null,
+      "value_min": 409,
+      "value_max": 416,
+      "approx": true,
+      "unit": "USD/t",
+      "as_of": "2026-11-15",
+      "value_text": "~$409–416/t",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ],
+      "note": "Other weeks near 2-year lows of $377–391/t."
+    },
+    {
+      "id": "agri_exports_apr_nov",
+      "group": "trade",
+      "label": "Agri exports, Apr–Nov",
+      "value": 14,
+      "approx": false,
+      "unit": "USD bn",
+      "as_of": "2026-11-15",
+      "value_text": "$14B (+8%)",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "rice_exports_value_8m",
+      "group": "trade",
+      "label": "Rice exports, first 8 months",
+      "value": 7.3,
+      "approx": false,
+      "unit": "USD bn",
+      "as_of": "2026-11-15",
+      "value_text": "$7.3B (+13%)",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ]
+    },
+    {
+      "id": "basmati_stranded",
+      "group": "trade",
+      "label": "Basmati stranded during conflict",
+      "value": 400000,
+      "approx": false,
+      "unit": "t",
+      "as_of": "2026-11-15",
+      "value_text": "400,000 t",
+      "source": "Business Standard / ET / The Hindu / Mint / Informist-DCA",
+      "source_tier": "T2",
+      "source_url": null,
+      "brief_anchor": "briefs/2026-11-15.html#grain",
+      "status": [
+        "reported"
+      ],
+      "note": "₹2–3k crore payments stuck (mostly Iran)."
+    }
+  ]
+}

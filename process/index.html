@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>संगम · Vipul Anand · MSME, Farm to Market, Research</title>
+<meta name="description" content="Morning briefs, field studies, data and the groundwork for an agriculture-rooted enterprise, with a Pehowa · Kurukshetra · Jhajjar lens.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%238E2818%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,200..900,30..100,0..1;1,9..144,200..900,30..100,0..1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@300;400;500;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4EDE0;--paper-warm:#EFE5D2;--paper-line:#D9CDB5;--rule:#C8B996;--ink:#1B1813;--ink-soft:#3A352D;--ink-quiet:#6E6557;--accent:#8E2818;--accent-soft:#B85A3F;--highlight:#E8DCC2;--river1:#2F5D62;--river2:#8E2818;--river3:#B07D2B;--river4:#4E6B3A;--river5:#5B4B8A;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:'Newsreader',Georgia,serif;font-size:17px;line-height:1.6;font-feature-settings:"ss01","onum"}
+body.nav-open{overflow:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.07 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");mix-blend-mode:multiply}
+.hi{font-family:'Tiro Devanagari Hindi','Newsreader',serif}
+a{color:var(--accent);text-decoration:underline dotted}
+.mono{font-family:'JetBrains Mono',monospace}
+/* nav */
+.nav{position:sticky;top:0;z-index:200;background:rgba(27,24,19,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:center;gap:8px;padding:0 16px;min-height:52px}
+.nav-brand{display:none;color:#fff;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;align-items:center;min-height:44px;padding:0 4px}
+.nav-brand .hi{font-size:18px;margin:0}
+.nav-brand:hover,.nav-brand:focus-visible{color:#E8C9A0}
+.nav-toggle{display:none;position:relative;width:44px;height:44px;margin:0;padding:0;border:0;background:transparent;color:#fff;cursor:pointer;flex-shrink:0;touch-action:manipulation}
+.nav-toggle:focus-visible{outline:2px solid #E8C9A0;outline-offset:2px}
+.nav-bars{position:absolute;top:50%;left:50%;width:22px;height:14px;transform:translate(-50%,-50%);display:block}
+.nav-bars span{position:absolute;left:0;width:22px;height:2px;background:currentColor;border-radius:1px;transition:transform .28s ease,opacity .2s ease,top .28s ease;transform-origin:center}
+.nav-bars span:nth-child(1){top:0}
+.nav-bars span:nth-child(2){top:6px}
+.nav-bars span:nth-child(3){top:12px}
+.nav.is-open .nav-bars span:nth-child(1){top:6px;transform:rotate(45deg)}
+.nav.is-open .nav-bars span:nth-child(2){opacity:0}
+.nav.is-open .nav-bars span:nth-child(3){top:6px;transform:rotate(-45deg)}
+.nav-menu{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 2px}
+.nav-menu a{color:#fff;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.06em;display:inline-flex;align-items:center;min-height:44px;padding:0 12px}
+.nav-menu a .hi{font-size:15px;margin-right:4px}
+.nav-menu a:hover,.nav-menu a:focus-visible{color:#E8C9A0}
+.nav-menu a:focus-visible{outline:2px solid #E8C9A0;outline-offset:-2px}
+/* ticker */
+.ticker{position:relative;z-index:2;background:var(--ink);color:#EFE5D2;border-bottom:1px solid #000;overflow:hidden;max-width:100%;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em}
+.ticker-inner{display:flex;gap:0;white-space:nowrap;animation:tick 70s linear infinite;width:max-content}
+.ticker:hover .ticker-inner{animation-play-state:paused}
+.ticker span.item{padding:8px 22px;border-right:1px solid #3A352D}
+#ticker .item:first-child{padding-left:170px}
+.ticker b{color:#fff;font-weight:600}
+.ticker .lbl{color:#C8B996}
+.ticker .asof{color:#8a8070}
+.ticker .live{background:var(--accent);color:#fff;padding:8px 14px;position:absolute;left:0;top:0;bottom:0;z-index:3;display:flex;align-items:center;gap:8px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .ticker-inner,.conf .flow,.dot,.feed li.new::before{animation:none}
+  .nav-bars span,.nav-menu,.stream{transition:none}
+}
+@media (max-width:760px){
+  .nav{justify-content:space-between;padding:0 8px 0 12px}
+  .nav-brand{display:inline-flex}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+  .nav-menu{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;flex-wrap:nowrap;background:#1B1813;padding:8px 0 12px;border-bottom:1px solid var(--rule);box-shadow:0 12px 24px rgba(0,0,0,.35);max-height:min(100vh, calc(100vh - 52px));overflow:auto;transform:translateY(-12px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s ease,transform .28s ease,visibility .28s}
+  .nav.is-open .nav-menu{transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto}
+  .nav-menu a{min-height:48px;padding:12px 20px;border-bottom:1px solid #3A352D;font-size:14px;letter-spacing:.04em}
+  .nav-menu a .hi{font-size:18px;margin-right:8px}
+  .ticker{font-size:11px}
+  .ticker .live{padding:8px 10px;font-size:10px;letter-spacing:.06em}
+  .ticker span.item{padding:8px 16px}
+  section.blk{scroll-margin-top:72px}
+}
+@media (max-width:760px) and (prefers-reduced-motion:reduce){
+  .nav-menu{transform:none}
+}
+.dot{width:8px;height:8px;border-radius:50%;background:#fff;display:inline-block;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+/* layout */
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:44px 48px 100px}
+.masthead{border-top:6px double var(--ink);border-bottom:1px solid var(--ink);padding:16px 0 18px;margin-bottom:40px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:24px}
+.mast-l,.mast-r{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-quiet)}
+.mast-r{text-align:right}
+.mast-c{text-align:center;font-family:'Fraunces',serif;font-variation-settings:"opsz" 144,"SOFT" 50,"wght" 700;font-size:13px;letter-spacing:.32em;text-transform:uppercase}
+.title-block{text-align:center;margin-bottom:40px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h1{font-family:'Tiro Devanagari Hindi',serif;font-weight:400;font-size:clamp(64px,10vw,128px);line-height:1;margin:0}
+h1 small{display:block;font-family:'Fraunces',serif;font-style:italic;font-variation-settings:"opsz" 144,"wght" 380,"SOFT" 100;font-size:clamp(20px,2.4vw,28px);color:var(--accent);margin-top:6px}
+.deck{font-size:21px;font-style:italic;color:var(--ink-soft);max-width:740px;margin:18px auto 0;line-height:1.45}
+section.blk{margin-bottom:84px;scroll-margin-top:72px}
+.sec-head{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:baseline;margin-bottom:28px;padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.sec-num{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--accent)}
+.sec-title{font-family:'Fraunces',serif;font-variation-settings:"opsz" 60,"wght" 500,"SOFT" 50;font-size:clamp(26px,3.3vw,38px);line-height:1.05;letter-spacing:-.015em;margin:0}
+.sec-title .hi{font-size:1.05em;margin-right:10px}
+.sec-title em{font-style:italic;color:var(--accent);font-size:.7em}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-quiet)}
+.lede{font-size:19px;line-height:1.55;color:var(--ink-soft);margin:0 0 26px;max-width:760px}
+/* sangam */
+.sangam{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center}
+.conf svg{width:100%;height:auto;display:block}
+.conf .flow{stroke-dasharray:6 10;animation:flow 3.5s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-64}}
+@media (prefers-reduced-motion:reduce){.conf .flow{animation:none}}
+.streams{display:grid;gap:12px}
+.stream{display:grid;grid-template-columns:10px 1fr auto;gap:14px;align-items:center;padding:14px 16px;background:var(--paper-warm);border:1px solid var(--rule);border-radius:4px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.stream:hover{transform:translateX(4px);box-shadow:-4px 4px 0 var(--rule)}
+.stream .bar{width:10px;align-self:stretch;border-radius:2px}
+.stream h3{margin:0;font-family:'Fraunces',serif;font-variation-settings:"wght" 560;font-size:19px}
+.stream h3 .hi{font-weight:400;margin-right:6px}
+.stream p{margin:2px 0 0;font-size:14.5px;color:var(--ink-soft);line-height:1.4}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:20px;border:1px solid currentColor;white-space:nowrap}
+.chip.live{color:#2F6B3A}.chip.review{color:#9A6B12}.chip.ph{color:var(--ink-quiet);border-style:dashed}.chip.ref{color:var(--river1)}
+/* feed */
+.feed{list-style:none;margin:0;padding:0;border-left:2px solid var(--ink);margin-left:8px}
+.feed li{position:relative;padding:0 0 22px 26px}
+.feed li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.feed li.new::before{background:var(--accent);box-shadow:0 0 0 0 rgba(142,40,24,.6);animation:ring 2s infinite}
+@keyframes ring{70%{box-shadow:0 0 0 10px rgba(142,40,24,0)}100%{box-shadow:0 0 0 0 rgba(142,40,24,0)}}
+.feed time{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:var(--ink-quiet);text-transform:uppercase}
+.feed .what{font-size:17.5px;margin:2px 0 0}
+.feed .what small{display:block;color:var(--ink-soft);font-size:14.5px}
+.grid2{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+/* briefs */
+.briefs{list-style:none;margin:0;padding:0}
+.briefs li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--paper-line)}
+.briefs .d{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);padding-top:3px}
+.briefs a.t{font-family:'Fraunces',serif;font-size:19px;font-variation-settings:"wght" 520;text-decoration:none;color:var(--ink)}
+.briefs a.t:hover{color:var(--accent)}
+.briefs p{margin:3px 0 0;font-size:14.5px;color:var(--ink-soft)}
+.briefs .meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-quiet);margin-top:4px}
+.howto{font-size:14px;color:var(--ink-quiet);margin-top:14px}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper-warm);border:1px solid var(--rule);border-top:4px solid var(--accent);padding:18px 18px 16px;border-radius:3px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-family:'Fraunces',serif;font-size:20px;font-variation-settings:"wght" 540;line-height:1.15}
+.card p{margin:0;font-size:15px;color:var(--ink-soft);line-height:1.45;flex:1}
+.card .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px}
+.card.ph{border-top-style:dashed;opacity:.85}
+/* data */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
+.stat{border:1px solid var(--rule);padding:14px;background:var(--paper-warm);border-radius:3px}
+.stat .v{font-family:'Fraunces',serif;font-size:30px;font-variation-settings:"wght" 600;line-height:1}
+.stat .l{font-size:13.5px;color:var(--ink-soft);margin-top:6px;line-height:1.3}
+.stat .s{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-quiet);margin-top:6px;text-transform:uppercase;letter-spacing:.08em}
+.bars{display:grid;gap:10px;max-width:760px}
+.bars .row{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;font-size:14.5px}
+.bars .track{position:relative;height:16px;background:var(--paper-line);border-radius:2px}
+.bars .fill{position:absolute;inset:0 auto 0 0;background:var(--river1);border-radius:2px}
+.bars .buf{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--accent)}
+.bars .n{font-family:'JetBrains Mono',monospace;font-size:12.5px;text-align:right}
+.pill{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:1px}
+.pill.fixed{background:#DCE8D5;color:#2F5A2A}.pill.revised{background:#F1E1B8;color:#7A5A10}.pill.derived{background:#D8E3EA;color:#264A5E}.pill.flag{background:#F2D0C8;color:#8E2818}.pill.reported{background:#E5DED0;color:#5A5246}
+/* foundation */
+details.launch{border:1px solid var(--rule);background:var(--paper-warm);border-radius:4px;padding:0 22px}
+details.launch>summary{cursor:pointer;padding:18px 0;font-family:'Fraunces',serif;font-size:21px;font-variation-settings:"wght" 520;list-style:none}
+details.launch>summary::-webkit-details-marker{display:none}
+details.launch>summary::before{content:"＋ ";color:var(--accent)}
+details.launch[open]>summary::before{content:"－ "}
+details.launch>summary small{display:block;font-family:'Newsreader',serif;font-size:15px;font-style:italic;color:var(--ink-soft);font-variation-settings:normal}
+.launchpad section{margin:10px 0 44px;scroll-margin-top:70px}
+.launchpad .sec-head{grid-template-columns:70px 1fr}
+.launchpad .sec-title{font-size:clamp(22px,2.6vw,30px)}
+.launchpad .highlight{background:var(--paper);border-left:4px solid var(--accent);padding:20px;margin:26px 0}
+.launchpad .step{background:var(--paper);padding:18px;border:1px solid var(--rule);margin:16px 0;border-radius:4px}
+.launchpad .lp-foot{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-quiet);text-align:center;border-top:1px solid var(--rule);padding:18px 0 22px}
+footer.site{margin-top:60px;padding-top:24px;border-top:6px double var(--ink);font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-quiet);text-align:center;line-height:2}
+.phnote{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink-quiet);border:1px dashed var(--rule);padding:6px 10px;display:inline-block;margin-top:8px}
+@media (max-width:860px){.wrap{padding:32px 20px 80px}.sangam,.grid2{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.masthead{grid-template-columns:1fr}.mast-r,.mast-l{text-align:center}.briefs li{grid-template-columns:1fr}.bars .row{grid-template-columns:100px 1fr 60px}}
+@media (max-width:390px){.wrap{padding:24px 16px 80px}.bars .row{grid-template-columns:1fr;gap:4px}.stats{grid-template-columns:1fr 1fr;gap:10px}.stat .v{font-size:26px}}
+</style>
+</head>
+<body>
+<header class="nav" id="site-nav">
+  <a class="nav-brand" href="#sangam"><span class="hi">संगम</span></a>
+  <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+    <span class="nav-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <nav class="nav-menu" id="nav-menu" aria-label="Page sections">
+    <a href="#sangam"><span class="hi">संगम</span>Sangam</a>
+    <a href="#halchal"><span class="hi">हलचल</span>Activity</a>
+    <a href="#prabhat"><span class="hi">प्रभात</span>Briefs</a>
+    <a href="#khet"><span class="hi">खेत से बाज़ार</span>Field to Market</a>
+    <a href="#adhyayan"><span class="hi">अध्ययन</span>Data</a>
+    <a href="#neenv"><span class="hi">नींव</span>Groundwork</a>
+    <a href="#sadhana"><span class="hi">साधना</span>Practice</a>
+  </nav>
+</header>
+
+<div class="ticker" aria-label="Figures from the latest brief">
+  <div class="live"><span class="dot"></span>LATEST BRIEF</div>
+  <div class="ticker-inner" id="ticker">
+    <!-- static fallback; replaced from data/<latest>.json when JS runs -->
+    <span class="item" style="padding-left:170px"><span class="lbl">CPI Oct</span> <b>6.09%</b> <span class="asof">MoSPI</span></span>
+    <span class="item"><span class="lbl">RBI repo</span> <b>5.50%</b></span>
+    <span class="item"><span class="lbl">Sensex 13 Nov</span> <b>81,592.45</b> −0.39%</span>
+    <span class="item"><span class="lbl">Nifty 50 13 Nov</span> <b>25,144.30</b> −0.61%</span>
+    <span class="item"><span class="lbl">Wheat stock ÷ buffer</span> <b>2.26×</b></span>
+    <span class="item"><span class="lbl">Rice stock ÷ buffer</span> <b>3.69×</b></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="mast-l">msme.vipulanand.in<br>Briefs · Studies · Groundwork</div>
+    <div class="mast-c">Vipul Anand</div>
+    <div class="mast-r">Latest: <span id="latestDate">15 Nov 2026</span><br>Pehowa · Kurukshetra · Jhajjar</div>
+  </header>
+
+  <div class="title-block">
+    <div class="eyebrow">Where the streams meet</div>
+    <h1>संगम<small>MSME · farm to market · research · practice</small></h1>
+    <p class="deck">Morning briefs, field studies, a growing data ledger and the groundwork for an agriculture-rooted enterprise in India, all in one place.</p>
+  </div>
+
+  <!-- SANGAM HUB -->
+  <section class="blk" id="sangam">
+    <div class="sec-head"><div class="sec-num">§ 00</div><h2 class="sec-title"><span class="hi">संगम</span><em>the confluence</em></h2><div class="sec-tag">Hub</div></div>
+    <div class="sangam">
+      <div class="conf" aria-hidden="true">
+        <svg viewBox="0 0 420 330" role="img">
+          <g fill="none" stroke-width="5" stroke-linecap="round" opacity=".9">
+            <path d="M20 20 C 120 40, 150 130, 210 230" stroke="var(--river1)"/>
+            <path d="M110 5 C 160 60, 180 140, 210 230" stroke="var(--river2)"/>
+            <path d="M210 0 C 205 80, 212 150, 210 230" stroke="var(--river3)"/>
+            <path d="M310 5 C 260 60, 240 140, 210 230" stroke="var(--river4)"/>
+            <path d="M400 20 C 300 40, 270 130, 210 230" stroke="var(--river5)"/>
+            <path d="M210 230 C 210 270, 212 300, 210 330" stroke="var(--ink)" stroke-width="12"/>
+          </g>
+          <g fill="none" stroke="#fff" stroke-width="2" opacity=".7">
+            <path class="flow" d="M20 20 C 120 40, 150 130, 210 230"/>
+            <path class="flow" d="M110 5 C 160 60, 180 140, 210 230"/>
+            <path class="flow" d="M210 0 C 205 80, 212 150, 210 230"/>
+            <path class="flow" d="M310 5 C 260 60, 240 140, 210 230"/>
+            <path class="flow" d="M400 20 C 300 40, 270 130, 210 230"/>
+            <path class="flow" d="M210 230 C 210 270, 212 300, 210 330"/>
+          </g>
+          <circle cx="210" cy="230" r="34" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <text x="210" y="240" text-anchor="middle" font-family="Tiro Devanagari Hindi, serif" font-size="24" fill="var(--accent)">संगम</text>
+          <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink-quiet)">
+            <text x="6" y="44">प्रभात</text><text x="70" y="22">खेत</text><text x="218" y="18">अध्ययन</text><text x="318" y="22">नींव</text><text x="366" y="44">साधना</text>
+          </g>
+        </svg>
+      </div>
+      <div class="streams">
+        <a class="stream" href="#prabhat"><span class="bar" style="background:var(--river1)"></span><div><h3><span class="hi">प्रभात</span>Morning briefs</h3><p id="streamBriefs">Latest: MSME Morning Brief, 15 Nov 2026</p></div><span class="chip live">Live</span></a>
+        <a class="stream" href="#khet"><span class="bar" style="background:var(--river2)"></span><div><h3><span class="hi">खेत से बाज़ार</span>Field to market</h3><p>Playbook, India Trade Atlas (FTAs), Haryana mushroom study</p></div><span class="chip live">Live + 1 in review</span></a>
+        <a class="stream" href="#adhyayan"><span class="bar" style="background:var(--river3)"></span><div><h3><span class="hi">अध्ययन</span>Data ledger</h3><p id="streamData">Figures from each brief, saved as data for studies</p></div><span class="chip live">Started</span></a>
+        <a class="stream" href="#neenv"><span class="bar" style="background:var(--river4)"></span><div><h3><span class="hi">नींव</span>Groundwork</h3><p>AgriVenture Launchpad: registration, Udyam, regulated sectors, next actions</p></div><span class="chip ref">Reference</span></a>
+        <a class="stream" href="#sadhana"><span class="bar" style="background:var(--river5)"></span><div><h3><span class="hi">साधना</span>Practice</h3><p>Discipline and self-development notes</p></div><span class="chip ph">Placeholder</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HALCHAL + PRABHAT -->
+  <div class="grid2">
+    <section class="blk" id="halchal">
+      <div class="sec-head"><div class="sec-num">§ 01</div><h2 class="sec-title"><span class="hi">हलचल</span><em>what's moving</em></h2><div class="sec-tag">Activity</div></div>
+      <ul class="feed" id="feed">
+        <li class="new" data-key="brief-2026-11-15"><time datetime="2026-11-15">15 Nov 2026</time><p class="what"><a href="briefs/2026-11-15.html">Morning brief published</a><small>CPI, RBI, markets, FD/NCD rates, wheat &amp; rice stocks</small></p></li>
+        <li data-key="data-2026-11-15"><time datetime="2026-11-15">15 Nov 2026</time><p class="what"><a href="data/2026-11-15.json">Data ledger opened</a><small>Figures from the 15 Nov brief saved as data</small></p></li>
+        <li data-key="study-mushroom"><time datetime="2026-11-10">10 Nov 2026</time><p class="what">Haryana mushroom study: research complete, in review<small>Kurukshetra / Pehowa cluster. Not published yet.</small></p></li>
+        <li data-key="fta-atlas"><time datetime="2026-04">Apr 2026</time><p class="what"><a href="../playbook/fta/">India Trade Atlas: FTA reference</a><small>India's free trade agreements, April 2026</small></p></li>
+        <li data-key="launchpad"><time datetime="2026-04">Apr 2026</time><p class="what"><a href="#neenv">AgriVenture Launchpad last updated</a><small>Now under नींव · Groundwork</small></p></li>
+      </ul>
+    </section>
+
+    <section class="blk" id="prabhat">
+      <div class="sec-head"><div class="sec-num">§ 02</div><h2 class="sec-title"><span class="hi">प्रभात</span><em>morning briefs</em></h2><div class="sec-tag" id="briefCount">1 brief</div></div>
+      <ul class="briefs" id="briefs">
+        <!-- static fallback; replaced from briefs/briefs.json when JS runs -->
+        <li><div class="d">15 Nov 2026</div><div><a class="t" href="briefs/2026-11-15.html">MSME Morning Brief — Sunday, 15 Nov 2026</a><p>CPI 6.09%, RBI repo 5.50%, markets, FD/NCD rates, input costs, and wheat &amp; rice stocks/exports with derived percentages; Pehowa/Kurukshetra/Jhajjar lens.</p><div class="meta"><a href="data/2026-11-15.json">data</a></div></div></li>
+      </ul>
+      <p class="howto">India focus, Haryana lens. Each brief marks every figure as fixed, revised, derived or flag, and names its source.</p>
+    </section>
+  </div>
+
+  <!-- KHET SE BAZAAR -->
+  <section class="blk" id="khet">
+    <div class="sec-head"><div class="sec-num">§ 03</div><h2 class="sec-title"><span class="hi">खेत से बाज़ार</span><em>field to market</em></h2><div class="sec-tag">Studies &amp; playbooks</div></div>
+    <p class="lede">From crop to buyer: what Haryana grows, who buys it, which trade doors are open, and what it costs to start.</p>
+    <div class="cards">
+      <div class="card"><h3>Playbook: a bridge-builder's strategic companion</h3><p>Haryana crop × FTA match matrix, six business models, a recommended composite, audience scripts and a first-90-days plan.</p><div class="foot"><a href="../playbook/">Open playbook →</a><span class="chip live">Live</span></div></div>
+      <div class="card"><h3>India Trade Atlas: free trade agreements</h3><p>Reference to India's FTAs, with a glossary and a pipeline watch. April 2026.</p><div class="foot"><a href="../playbook/fta/">Open atlas →</a><span class="chip live">Live</span></div></div>
+      <div class="card ph"><h3>Mushroom farming in Haryana: full-cycle benchmark</h3><p>Kurukshetra district and neighbours: production, training, mandi prices, subsidy. Research dated 10 Nov 2026.</p><div class="foot"><span>Not published yet</span><span class="chip review">In review</span></div></div>
+    </div>
+  </section>
+
+  <!-- ADHYAYAN -->
+  <section class="blk" id="adhyayan">
+    <div class="sec-head"><div class="sec-num">§ 04</div><h2 class="sec-title"><span class="hi">अध्ययन</span><em>the data ledger</em></h2><div class="sec-tag" id="ledgerCount">72 figures · 1 brief</div></div>
+    <p class="lede">Every brief leaves its numbers behind as data: value, unit, date, source and status. Week by week the ledger grows into something we can study.</p>
+    <div class="stats" id="stats">
+      <div class="stat"><div class="v">46.3 Mt</div><div class="l">Central pool wheat, 1 Oct</div><div class="s">buffer 20.5 Mt</div></div>
+      <div class="stat"><div class="v">37.8 Mt</div><div class="l">Central pool rice, 1 Oct</div><div class="s">buffer 10.25 Mt</div></div>
+      <div class="stat"><div class="v">₹29/kg</div><div class="l">OMSS rice base price</div><div class="s">economic cost &gt; ₹36</div></div>
+      <div class="stat"><div class="v">0.6 Mt</div><div class="l">Haryana paddy procurement still flowing</div><div class="s">6 lakh t</div></div>
+    </div>
+    <div class="bars" id="bars" aria-label="Central pool stock vs buffer norm">
+      <div class="row"><span>Wheat 46.3 Mt</span><div class="track"><div class="fill" style="width:92.6%"></div><div class="buf" style="left:41%"></div></div><span class="n">2.26×</span></div>
+      <div class="row"><span>Rice 37.8 Mt</span><div class="track"><div class="fill" style="width:75.6%"></div><div class="buf" style="left:20.5%"></div></div><span class="n">3.69×</span></div>
+    </div>
+    <p class="howto">Bars: central pool stock, 1 Oct 2026, on a 0–50 Mt scale. Red line: buffer norm. From the <a href="briefs/2026-11-15.html#grain">15 Nov brief</a>. Files: <a href="data/2026-11-15.json">data/2026-11-15.json</a> · <a href="briefs/briefs.json">briefs/briefs.json</a> · <a href="data/README.md">schema</a></p>
+  </section>
+
+  <!-- NEENV -->
+  <section class="blk" id="neenv">
+    <div class="sec-head"><div class="sec-num">§ 05</div><h2 class="sec-title"><span class="hi">नींव</span><em>the groundwork</em></h2><div class="sec-tag">Reference</div></div>
+    <p class="lede">The legal and structural base: what gets registered first, what's regulated, and the next moves. Also see <a href="../foundation/">Foundation: Revenue Generation System</a> for the financial architecture and scheme stack.</p>
+    <details class="launch" id="launchpad">
+      <summary>AgriVenture Launchpad: From Zero to Revenue<small>Living document: proprietorship + Udyam, regulated sectors, next actions. Last updated April 2026.</small></summary>
+      <div class="launchpad">
+        <!-- INTRODUCTION -->
+        <section id="introduction">
+            <div class="sec-head">
+                <div class="sec-num">§ 00</div>
+                <h2 class="sec-title">Welcome, Future Agri-Entrepreneur</h2>
+            </div>
+            <p class="lede">This document captures the complete foundational journey for any agriculture-based revenue generation system. Whether your final form becomes crop-based, value-added processing, agritech services, organic inputs, farm-to-consumer, or something entirely new — this is your practical base.</p>
+        </section>
+
+        <!-- REGISTRATION -->
+        <section id="registration">
+            <div class="sec-head">
+                <div class="sec-num">§ 01</div>
+                <h2 class="sec-title">Register a Proprietorship Firm + Udyam Aadhaar</h2>
+            </div>
+
+            <div class="step">
+                <strong>Step 1: PAN &amp; Aadhaar Ready</strong><br>
+                Ensure you have PAN card and Aadhaar linked with mobile number.
+            </div>
+
+            <div class="step">
+                <strong>Step 2: Udyam Aadhaar (MSME Registration) — Do This First</strong><br>
+                <strong>Official Link:</strong> <a href="https://udyamregistration.gov.in/" target="_blank">udyamregistration.gov.in</a><br>
+                • Completely free • Takes 10–15 minutes • Instant certificate with QR code<br>
+                Benefits: Priority loans, subsidies, government schemes, easier bank account opening.
+            </div>
+
+            <div class="step">
+                <strong>Step 3: Current Bank Account in Firm Name</strong><br>
+                Use Udyam Certificate + PAN + Aadhaar + Address Proof.
+            </div>
+
+            <div class="step">
+                <strong>Step 4: Shop &amp; Establishment Registration (State-specific)</strong><br>
+                Search “[Your State] Shop and Establishment Online Portal”
+            </div>
+
+            <div class="step">
+                <strong>Step 5: GST Registration (if turnover &gt; ₹40L / ₹20L)</strong><br>
+                <strong>Portal:</strong> <a href="https://www.gst.gov.in/" target="_blank">gst.gov.in</a>
+            </div>
+        </section>
+
+        <!-- UDYAM -->
+        <section id="udyam">
+            <div class="sec-head">
+                <div class="sec-num">§ 02</div>
+                <h2 class="sec-title">Udyam Aadhaar – Quick Start Guide</h2>
+            </div>
+            <p class="lede"><strong>Why do it immediately?</strong> It gives your agriculture startup instant credibility and access to dozens of government schemes designed for agri-MSMEs.</p>
+            <ul>
+                <li>One registration for multiple activities (farming, processing, trading, services)</li>
+                <li>No renewal required</li>
+                <li>Self-declared investment &amp; turnover</li>
+            </ul>
+        </section>
+
+        <!-- REGULATED SECTORS -->
+        <section id="regulated">
+            <div class="sec-head">
+                <div class="sec-num">§ 03</div>
+                <h2 class="sec-title">Businesses Involving Regulated Sectors</h2>
+            </div>
+
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Food &amp; Beverage</h3>
+            <ul>
+                <li>Food processing, organic products, spices, ready-to-eat, dairy, honey, pickles</li>
+                <li>Restaurants, cloud kitchens, FPO products</li>
+                <li><strong>Required:</strong> FSSAI License</li>
+            </ul>
+
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Agriculture Inputs &amp; Chemicals</h3>
+            <ul>
+                <li>Fertilizers, pesticides, bio-stimulants, seeds</li>
+                <li><strong>Required:</strong> Fertilizer License, Insecticide License, Seed Certification</li>
+            </ul>
+
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Healthcare / Nutraceuticals (Agri-linked)</h3>
+            <ul>
+                <li>Ayurvedic herbs, medicinal plants, organic supplements</li>
+                <li><strong>Required:</strong> AYUSH / Drug Controller approvals</li>
+            </ul>
+
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Import-Export of Agri Commodities</h3>
+            <ul>
+                <li>Rice, spices, fruits, vegetables, coffee, tea</li>
+                <li><strong>Required:</strong> IEC Code + APEDA + FSSAI (for food)</li>
+            </ul>
+
+            <h3 style="font-family:'Fraunces',serif; color:var(--accent);">Manufacturing &amp; Processing Units</h3>
+            <ul>
+                <li>Oil mills, flour mills, cold storage, packaging, bio-fertilizer plants</li>
+                <li><strong>Required:</strong> Factory License, Pollution NOC, Fire NOC</li>
+            </ul>
+        </section>
+
+        <!-- NEXT STEPS -->
+        <section id="next">
+            <div class="sec-head">
+                <div class="sec-num">§ 04</div>
+                <h2 class="sec-title">Next Actions (Blank State → Revenue)</h2>
+            </div>
+            <ol style="font-size:16.5px; line-height:1.85;">
+                <li>Complete Udyam + Bank Account this week</li>
+                <li>Decide core revenue model (contract farming, value-added products, agritourism, input supply, tech platform, export, etc.)</li>
+                <li>Validate idea with 20–30 potential customers/farmers</li>
+                <li>Prepare simple one-page business model</li>
+                <li>Apply for relevant licenses based on chosen sector</li>
+                <li>Explore subsidies: PM-KISAN, Agriculture Infrastructure Fund, NABARD, State schemes</li>
+            </ol>
+
+            <div class="highlight">
+                <strong>Remember:</strong> You are building a revenue generation system rooted in agriculture. The exact shape and form will evolve — this document gives you the legal and structural foundation to start experimenting safely and legitimately.
+            </div>
+        </section>
+
+        <div class="lp-foot">
+          AgriVenture Launchpad • Living Document for Agriculture-Based Startups in India<br>
+          Start small. Stay compliant. Scale with revenue.<br>
+          Last Updated: April 2026 • Always verify latest rules on official government portals
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- SADHANA -->
+  <section class="blk" id="sadhana">
+    <div class="sec-head"><div class="sec-num">§ 06</div><h2 class="sec-title"><span class="hi">साधना</span><em>the practice</em></h2><div class="sec-tag">Coming</div></div>
+    <p class="lede">The discipline behind the work: chosen habits, kept steadily.</p>
+    <div class="phnote">PLACEHOLDER: nothing is published here yet. Links will be added when the notes are ready.</div>
+  </section>
+
+  <footer class="site">
+    msme.vipulanand.in/process/ · trial layout · the root home page is unchanged<br>
+    msme.vipulanand.in · <span class="hi" style="letter-spacing:0">संगम</span> · Reference only, not investment advice<br>
+    Figures carry their source and status on each brief · Always verify on official portals
+  </footer>
+</div>
+
+<script>
+(function(){
+  var nav=document.getElementById("site-nav");
+  var btn=document.getElementById("nav-toggle");
+  var menu=document.getElementById("nav-menu");
+  function isOpen(){return btn && btn.getAttribute("aria-expanded")==="true";}
+  function setOpen(open,opts){
+    if(!nav||!btn)return;
+    nav.classList.toggle("is-open",open);
+    document.body.classList.toggle("nav-open",open);
+    btn.setAttribute("aria-expanded",open?"true":"false");
+    btn.setAttribute("aria-label",open?"Close menu":"Open menu");
+    if(!open && opts && opts.focus) btn.focus({preventScroll:true});
+  }
+  if(btn&&nav&&menu){
+    btn.addEventListener("click",function(e){e.stopPropagation();setOpen(!isOpen());});
+    menu.addEventListener("click",function(e){
+      var a=e.target.closest("a");
+      if(!a)return;
+      var href=a.getAttribute("href")||"";
+      if(href.charAt(0)==="#"){
+        e.preventDefault();
+        var el=document.getElementById(href.slice(1));
+        setOpen(false);
+        requestAnimationFrame(function(){requestAnimationFrame(function(){
+          if(el) el.scrollIntoView();
+          if(history.replaceState) history.replaceState(null,"",href);
+          else location.hash=href;
+        });});
+      } else {
+        setOpen(false);
+      }
+    });
+    var brand=nav.querySelector(".nav-brand");
+    if(brand) brand.addEventListener("click",function(){ if(isOpen()) setOpen(false); });
+    document.addEventListener("click",function(e){if(isOpen()&&!nav.contains(e.target)) setOpen(false,{focus:true});});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen()){e.preventDefault();setOpen(false,{focus:true});}});
+    window.addEventListener("resize",function(){if(window.matchMedia("(min-width:761px)").matches&&isOpen()) setOpen(false);});
+  }
+})();
+(function(){
+  var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function fmt(d){var p=d.split("-");return (p[2]?(+p[2])+" ":"")+MON[+p[1]-1]+" "+p[0];}
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function get(u){return fetch(u,{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(u+" "+r.status);return r.json();});}
+
+  // open the Launchpad when an old anchor (#registration, #udyam, ...) is used
+  function openForHash(){var h=location.hash.slice(1);if(!h)return;var el=document.getElementById(h);var d=document.getElementById("launchpad");if(el&&d&&d.contains(el)&&el!==d){d.open=true;setTimeout(function(){el.scrollIntoView();},0);}}
+  window.addEventListener("hashchange",openForHash);openForHash();
+
+  function padTicker(){
+    var live=document.querySelector(".ticker .live");
+    var first=document.querySelector("#ticker .item");
+    if(live&&first) first.style.paddingLeft=Math.max(170, Math.ceil(live.getBoundingClientRect().width+20))+"px";
+  }
+  padTicker();
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(padTicker);
+  window.addEventListener("resize",padTicker);
+
+  get("briefs/briefs.json").then(function(m){
+    var b=(m.briefs||[]).slice().sort(function(x,y){return y.date<x.date?-1:1;});
+    if(!b.length)return;
+    document.getElementById("briefs").innerHTML=b.map(function(x){
+      return '<li><div class="d">'+fmt(x.date)+'</div><div><a class="t" href="'+esc(x.url)+'">'+esc(x.title)+'</a><p>'+esc(x.summary)+'</p><div class="meta">'+(x.data?'<a href="'+esc(x.data)+'">data</a>':'')+(x.tags?' · '+x.tags.map(esc).join(" · "):'')+'</div></div></li>';
+    }).join("");
+    document.getElementById("briefCount").textContent=b.length+(b.length===1?" brief":" briefs");
+    document.getElementById("latestDate").textContent=fmt(b[0].date);
+    document.getElementById("streamBriefs").textContent="Latest: "+b[0].title.replace(/ — /," · ")+" · "+b.length+(b.length===1?" brief":" briefs")+" so far";
+    // add any brief missing from the activity feed
+    var feed=document.getElementById("feed");
+    b.slice().reverse().forEach(function(x){
+      if(feed.querySelector('[data-key="brief-'+x.date+'"]'))return;
+      var li=document.createElement("li");li.className="new";li.dataset.key="brief-"+x.date;
+      li.innerHTML='<time datetime="'+x.date+'">'+fmt(x.date)+'</time><p class="what"><a href="'+esc(x.url)+'">Morning brief published</a><small>'+esc(x.summary)+'</small></p>';
+      feed.insertBefore(li,feed.firstChild);
+    });
+    [].forEach.call(feed.querySelectorAll("li.new"),function(li,i){if(i>0)li.classList.remove("new");});
+    var withData=b.filter(function(x){return x.data;});
+    if(!withData.length)return;
+    return get(withData[0].data).then(function(d){
+      var F={};d.figures.forEach(function(f){F[f.id]=f;});
+      var pick=["cpi_headline_yoy","rbi_repo","sensex_close","nifty50_close","gsec_10y_yield","brent_crude","buffer_multiple_wheat","buffer_multiple_rice","rice_production_forecast","omss_rice_base_price","fd_suryoday_general","retail_palm_oil"];
+      var items=pick.filter(function(k){return F[k];}).map(function(k){var f=F[k];
+        return '<span class="item"><span class="lbl">'+esc(f.label)+'</span> <b>'+esc(f.value_text)+'</b> <span class="asof">'+esc(f.as_of)+'</span>'+f.status.map(function(s){return '<span class="pill '+esc(s)+'">'+esc(s)+'</span>';}).join("")+'</span>';});
+      if(items.length){var html=items.join("");var t=document.getElementById("ticker");t.innerHTML=html+html;padTicker();}
+      document.getElementById("ledgerCount").textContent=d.figures.length+" figures · "+withData.length+(withData.length===1?" brief":" briefs");
+      document.getElementById("streamData").textContent=d.figures.length+" figures from "+fmt(d.brief_date)+", each with unit, date, source and status";
+    });
+  }).catch(function(e){ if(window.console)console.warn("Using static fallback:",e.message); });
+})();
+</script>
+</body>
+</html>
